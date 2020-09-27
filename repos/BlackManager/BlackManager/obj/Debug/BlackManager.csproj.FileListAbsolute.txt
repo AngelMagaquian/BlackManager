@@ -1,0 +1,10 @@
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe.config
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.pdb
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csprojAssemblyReference.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Form1.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Properties.Resources.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.GenerateResource.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.pdb
