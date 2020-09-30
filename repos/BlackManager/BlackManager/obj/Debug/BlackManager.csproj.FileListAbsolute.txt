@@ -8,3 +8,13 @@ C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csp
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.exe
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.pdb
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe.config
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.pdb
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csprojAssemblyReference.cache
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Form1.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Properties.Resources.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.GenerateResource.cache
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.exe
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.pdb
