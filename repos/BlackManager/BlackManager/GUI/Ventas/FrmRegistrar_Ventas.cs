@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BlackManager.Logic;
+using BlackManager.Reutilizables;
+using BlackManager.Logica_Negocio;
+
 namespace BlackManager
 {
     public partial class FrmRegistar_Venta : Form
@@ -23,21 +26,19 @@ namespace BlackManager
 
         private void optEfectivo_CheckedChanged(object sender, EventArgs e)
         {
-
+            cboMetodoPago.Enabled = false;
         }
 
-        private void lblMetodo1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void optTarjeta_CheckedChanged(object sender, EventArgs e)
         {
+            cboMetodoPago.Enabled = true;
+        }
+
+        private void FrmRegistar_Venta_Load(object sender, EventArgs e)
+        {
+            Metodo_Pago miMP = new Metodo_Pago();
+            Reusar.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id_metodo_pago");
 
         }
     }

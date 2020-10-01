@@ -19,7 +19,7 @@ namespace BlackManager.Logic
             oProveedor = new DAO_Proveedor();
         }
 
-        public IList<Proveedor> ObtenerTodos()
+        private IList<Proveedor> ObtenerTodos()
         {
            return oProveedor.GetAll();
         }
@@ -28,9 +28,10 @@ namespace BlackManager.Logic
         {
             return nombre;
         }
-        public void LlenarGrilla(DataGridView grilla)
+        public static void LlenarGrilla(DataGridView grilla)
         {
-            IList<Proveedor> todosProveedores = ObtenerTodos();
+            Proveedor objProv = new Proveedor();
+            IList<Proveedor> todosProveedores = objProv.ObtenerTodos();
             foreach (Proveedor p in todosProveedores)
             {
                 grilla.Rows.Add(p.id, p.nombre);

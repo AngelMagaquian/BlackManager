@@ -47,47 +47,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\BDhelper.cs" />
-    <Compile Include="DAO\DAO Proveedor.cs" />
+    <Compile Include="DAO\DAO_Proveedor.cs" />
     <Compile Include="DAO\DAO_Marca.cs" />
-    <Compile Include="Formularios\Stock\FrmActualizar_Precio.cs">
+    <Compile Include="DAO\DAO_Metodo_Pago.cs" />
+    <Compile Include="GUI\Stock\FrmActualizar_Precio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Stock\FrmActualizar_Precio.Designer.cs">
+    <Compile Include="GUI\Stock\FrmActualizar_Precio.Designer.cs">
       <DependentUpon>FrmActualizar_Precio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Stock\FrmConsultar_Stock.cs">
+    <Compile Include="GUI\Stock\FrmConsultar_Stock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Stock\FrmConsultar_Stock.Designer.cs">
+    <Compile Include="GUI\Stock\FrmConsultar_Stock.Designer.cs">
       <DependentUpon>FrmConsultar_Stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Stock\FrmRegistar_Stock.cs">
+    <Compile Include="GUI\Stock\FrmRegistar_Stock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Stock\FrmRegistar_Stock.Designer.cs">
+    <Compile Include="GUI\Stock\FrmRegistar_Stock.Designer.cs">
       <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas\FrmRegistrar_Ventas.cs">
+    <Compile Include="GUI\Ventas\FrmRegistrar_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas\FrmRegistrar_Ventas.Designer.cs">
+    <Compile Include="GUI\Ventas\FrmRegistrar_Ventas.Designer.cs">
       <DependentUpon>FrmRegistrar_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica Negocio\Marca.cs" />
+    <Compile Include="Logica Negocio\Metodo_Pago.cs" />
     <Compile Include="Logica Negocio\Proveedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reutilizables\Reusar.cs" />
-    <EmbeddedResource Include="Formularios\Stock\FrmActualizar_Precio.resx">
+    <EmbeddedResource Include="GUI\Stock\FrmActualizar_Precio.resx">
       <DependentUpon>FrmActualizar_Precio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Stock\FrmConsultar_Stock.resx">
+    <EmbeddedResource Include="GUI\Stock\FrmConsultar_Stock.resx">
       <DependentUpon>FrmConsultar_Stock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Stock\FrmRegistar_Stock.resx">
+    <EmbeddedResource Include="GUI\Stock\FrmRegistar_Stock.resx">
       <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ventas\FrmRegistrar_Ventas.resx">
+    <EmbeddedResource Include="GUI\Ventas\FrmRegistrar_Ventas.resx">
       <DependentUpon>FrmRegistrar_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

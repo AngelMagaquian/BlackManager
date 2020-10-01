@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BlackManager.DAO;
+using BlackManager.Logica_Negocio;
+
 namespace BlackManager.Logic
 {
     class Marca
@@ -18,9 +20,18 @@ namespace BlackManager.Logic
             oMarca = new DAO_Marca();
         }
 
-        public IList<Marca> ObtenerTodos()
+        private IList<Marca> ObtenerTodos()
         {
             return oMarca.GetAll();
+        }
+        public static void LlenarGrilla(DataGridView grilla)
+        {
+            Marca objMarca = new Marca();
+            IList<Marca> todasMarcas = objMarca.ObtenerTodos();
+            foreach (Marca m in todasMarcas)
+            {
+                grilla.Rows.Add(m.id, m.nombre);
+            }
         }
 
         public override string ToString()
@@ -28,13 +39,5 @@ namespace BlackManager.Logic
             return nombre;
         }
 
-        public void LlenarGrilla(DataGridView grilla)
-        {
-            IList<Marca> todasMarcas = ObtenerTodos();
-            foreach (Marca m in todasMarcas)
-            {
-                grilla.Rows.Add(m.id, m.nombre);
-            }
-        }
     }
 }
