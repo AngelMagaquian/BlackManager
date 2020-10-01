@@ -13,7 +13,7 @@ namespace BlackManager.Logica_Negocio
         private int id;
         public string nombre { get => nombre; set => nombre = value; }
         public string descripcion { get => descripcion; set => descripcion = value; }
-        public float recargo { get => recargo; set => recargo = value; }
+        public double recargo { get => recargo; set => recargo = value; }
         DAO_Metodo_Pago oMetodo_Pago;
         public Metodo_Pago()
         {

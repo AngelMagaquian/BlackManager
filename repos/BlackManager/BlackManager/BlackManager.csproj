@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\BDhelper.cs" />
+    <Compile Include="DAO\DAO_Producto.cs" />
     <Compile Include="DAO\DAO_Proveedor.cs" />
     <Compile Include="DAO\DAO_Marca.cs" />
     <Compile Include="DAO\DAO_Metodo_Pago.cs" />
@@ -76,6 +77,7 @@
     </Compile>
     <Compile Include="Logica Negocio\Marca.cs" />
     <Compile Include="Logica Negocio\Metodo_Pago.cs" />
+    <Compile Include="Logica Negocio\Producto.cs" />
     <Compile Include="Logica Negocio\Proveedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
