@@ -19,6 +19,7 @@ namespace BlackManager.DAO
 
             return prov;
         }
+
         public IList<Proveedor> GetAll()
         {
             List<Proveedor> listaProveedores = new List<Proveedor>();
@@ -29,7 +30,7 @@ namespace BlackManager.DAO
             {
                 listaProveedores.Add(Mappeo(fila));
             }
-
+            
             return listaProveedores;
         }
     }

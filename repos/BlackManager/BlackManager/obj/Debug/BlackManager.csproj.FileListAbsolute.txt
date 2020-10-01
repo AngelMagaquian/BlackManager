@@ -2,7 +2,6 @@ C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
 C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
 C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.pdb
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csprojAssemblyReference.cache
-C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Form1.resources
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Properties.Resources.resources
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.GenerateResource.cache
 C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
@@ -18,3 +17,7 @@ D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\ob
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.exe
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.pdb
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmActualizar_Precio.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmConsultar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmRegistar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.FrmRegistar_Venta.resources
