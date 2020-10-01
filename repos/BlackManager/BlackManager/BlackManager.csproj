@@ -48,17 +48,47 @@
   <ItemGroup>
     <Compile Include="DAO\BDhelper.cs" />
     <Compile Include="DAO\DAO Proveedor.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="DAO\DAO_Marca.cs" />
+    <Compile Include="Formularios\Stock\FrmActualizar_Precio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\Stock\FrmActualizar_Precio.Designer.cs">
+      <DependentUpon>FrmActualizar_Precio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\Proveedor.cs" />
+    <Compile Include="Formularios\Stock\FrmConsultar_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\FrmConsultar_Stock.Designer.cs">
+      <DependentUpon>FrmConsultar_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\FrmRegistar_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\FrmRegistar_Stock.Designer.cs">
+      <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\FrmRegistrar_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\FrmRegistrar_Ventas.Designer.cs">
+      <DependentUpon>FrmRegistrar_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica Negocio\Marca.cs" />
+    <Compile Include="Logica Negocio\Proveedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Reutilizables\Reusar.cs" />
+    <EmbeddedResource Include="Formularios\Stock\FrmActualizar_Precio.resx">
+      <DependentUpon>FrmActualizar_Precio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\FrmConsultar_Stock.resx">
+      <DependentUpon>FrmConsultar_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\FrmRegistar_Stock.resx">
+      <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\FrmRegistrar_Ventas.resx">
+      <DependentUpon>FrmRegistrar_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +112,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

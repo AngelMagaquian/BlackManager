@@ -134,5 +134,32 @@ namespace BlackManager.DAO
 
         }
 
+        public DataTable ConsultarSQL(String ejec, Dictionary<string, object> param = null)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                Conectar();
+                dbCommand.CommandText = ejec;
+                if (param != null)
+                {
+                    foreach (var p in param)
+                    {
+                        dbCommand.Parameters.AddWithValue(p.Key, p.Value);
+                    }
+                }
+                tabla.Load(dbCommand.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error en la transaccion " + ex.Message, "Error de ejecucion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return tabla;
+        }
+
     }
 }
