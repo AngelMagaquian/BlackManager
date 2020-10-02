@@ -48,7 +48,7 @@ namespace BlackManager.DAO
         }
 
         //Utilizamos el Conectar transaccion porque se maneja de forma distinto al conectar simple
-        private void ConectarTransaccion()
+        public void ConectarTransaccion()
         {
             dbConnection.Open();
             connType = TipoConexion.transaccion;
@@ -57,7 +57,7 @@ namespace BlackManager.DAO
             connEstado = EstadoTransaccion.exito;
             dbCommand.Connection = dbConnection;
         }
-        private void Desconectar()
+        internal void Desconectar()
         {
             if (connType == TipoConexion.transaccion)
             {
@@ -104,7 +104,6 @@ namespace BlackManager.DAO
 
             try
             {
-                ConectarTransaccion();
                 dbCommand.CommandType = CommandType.Text;
                 //Establecemos todo el sql pasado por parametro
                 dbCommand.CommandText = ejecutar;
@@ -126,10 +125,7 @@ namespace BlackManager.DAO
                 MessageBox.Show("Hubo un error en la transaccion " + ex.Message ,"Error de ejecucion" , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connEstado = EstadoTransaccion.fracaso;
             }
-            finally
-            {
-                Desconectar();
-            }
+
             return resultado;
 
         }
