@@ -16,5 +16,10 @@ namespace BlackManager.Formularios.Stock
         {
             InitializeComponent();
         }
+
+        private void FrmConsultar_Stock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

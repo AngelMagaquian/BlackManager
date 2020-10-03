@@ -1,8 +1,13 @@
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe.config
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\bin\Debug\BlackManager.pdb
-D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csprojAssemblyReference.cache
-D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Form1.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Compras.FrmRegistrar.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Compras.FrmRegistrar_Comprar.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmActualizar_Precio.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmConsultar_Stock.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Formularios.Stock.FrmRegistar_Stock.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Ventas.FrmConsultar_Ventas.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.FrmRegistar_Venta.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Properties.Resources.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.GenerateResource.cache
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache

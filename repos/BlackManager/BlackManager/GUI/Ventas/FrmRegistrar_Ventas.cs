@@ -11,8 +11,7 @@ using System.Windows.Forms;
 using BlackManager.Logic;
 using BlackManager.Reutilizables;
 using BlackManager.Logica_Negocio;
-using BlackManager.GUI.
-
+using BlackManager.Formularios.Stock;
 
 namespace BlackManager
 {
@@ -47,7 +46,7 @@ namespace BlackManager
         private void consultarStockActualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            //FrmConsultar_Stock window 
+            //FrmConsultar_Stock window
         }
     }
 }

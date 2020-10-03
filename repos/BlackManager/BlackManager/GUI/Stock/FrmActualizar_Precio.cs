@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace BlackManager.Formularios.Stock
 {
     public partial class FrmActualizar_Precio : Form
@@ -15,6 +14,11 @@ namespace BlackManager.Formularios.Stock
         public FrmActualizar_Precio()
         {
             InitializeComponent();
+        }
+
+        private void FrmActualizar_Precio_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
