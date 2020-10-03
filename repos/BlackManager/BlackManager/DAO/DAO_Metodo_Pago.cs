@@ -10,7 +10,7 @@ namespace BlackManager.DAO
 {
     class DAO_Metodo_Pago
     {
-        public IList<Metodo_Pago> GetAll()
+        public List<Metodo_Pago> GetAll()
         {
             List<Metodo_Pago> listaMarcas = new List<Metodo_Pago>();
 
@@ -27,7 +27,7 @@ namespace BlackManager.DAO
         private Metodo_Pago Mappeo(DataRow metodo_pago)
         {
             Metodo_Pago miMP = new Metodo_Pago();
-            miMP.Id = int.Parse(metodo_pago["id_metodo_pago"].ToString());
+            miMP.Id = int.Parse(metodo_pago["id_metodo_de_pago"].ToString());
             miMP.nombre = metodo_pago["nombre"].ToString();
             miMP.descripcion = metodo_pago["descripcion"].ToString();
             miMP.recargo = float.Parse(metodo_pago["recargo"].ToString());

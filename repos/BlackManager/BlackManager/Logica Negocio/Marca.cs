@@ -20,7 +20,7 @@ namespace BlackManager.Logic
             oMarca = new DAO_Marca();
         }
 
-        private IList<Marca> ObtenerTodos()
+        public IList<Marca> ObtenerTodos()
         {
             return oMarca.GetAll();
         }

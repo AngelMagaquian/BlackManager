@@ -11,10 +11,11 @@ namespace BlackManager.Logica_Negocio
     class Metodo_Pago
     {
         private int id;
-        public string nombre { get => nombre; set => nombre = value; }
-        public string descripcion { get => descripcion; set => descripcion = value; }
-        public double recargo { get => recargo; set => recargo = value; }
+        public string nombre { get ; set; }
+        public string descripcion { get ; set; }
+        public double recargo { get ; set ; }
         DAO_Metodo_Pago oMetodo_Pago;
+
         public Metodo_Pago()
         {
           oMetodo_Pago = new DAO_Metodo_Pago();
@@ -25,14 +26,14 @@ namespace BlackManager.Logica_Negocio
         public static void LlenarGrilla(DataGridView grilla)
         {
             Metodo_Pago objMP = new Metodo_Pago();
-            IList<Metodo_Pago> todosMP = objMP.ObtenerTodos();
+            List<Metodo_Pago> todosMP = objMP.ObtenerTodos();
             foreach (Metodo_Pago mp in todosMP)
             {
                 grilla.Rows.Add(mp.id, mp.nombre);
             }
         }
 
-        public IList<Metodo_Pago> ObtenerTodos()
+        public List<Metodo_Pago> ObtenerTodos()
         {
             return oMetodo_Pago.GetAll();
         }

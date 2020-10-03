@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using BlackManager.Logic;
 using BlackManager.Reutilizables;
 using BlackManager.Logica_Negocio;
+using BlackManager.GUI.
+
 
 namespace BlackManager
 {
@@ -38,8 +40,14 @@ namespace BlackManager
         private void FrmRegistar_Venta_Load(object sender, EventArgs e)
         {
             Metodo_Pago miMP = new Metodo_Pago();
-            Reusar.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id_metodo_pago");
+            Reusar.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id");
 
+        }
+
+        private void consultarStockActualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            //FrmConsultar_Stock window 
         }
     }
 }
