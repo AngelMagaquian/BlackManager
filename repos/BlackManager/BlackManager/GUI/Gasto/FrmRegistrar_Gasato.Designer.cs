@@ -1,4 +1,4 @@
-﻿namespace BlackManager.GUI.Compras
+﻿namespace BlackManager.GUI.Gasto
 {
     partial class FrmRegistrar
     {
@@ -45,18 +45,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 80);
+            this.label1.Location = new System.Drawing.Point(4, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 32);
+            this.label1.Size = new System.Drawing.Size(191, 26);
             this.label1.TabIndex = 19;
             this.label1.Text = "Registrar Gastos";
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(59, 376);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCargar.Location = new System.Drawing.Point(44, 306);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(131, 59);
+            this.btnCargar.Size = new System.Drawing.Size(98, 48);
             this.btnCargar.TabIndex = 16;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -64,73 +65,81 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 142);
+            this.label2.Location = new System.Drawing.Point(10, 115);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Producto:";
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(105, 142);
+            this.txtProducto.Location = new System.Drawing.Point(79, 115);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(242, 22);
+            this.txtProducto.Size = new System.Drawing.Size(182, 20);
             this.txtProducto.TabIndex = 22;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(105, 195);
+            this.txtDescripcion.Location = new System.Drawing.Point(79, 158);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(242, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(182, 20);
             this.txtDescripcion.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 195);
+            this.label3.Location = new System.Drawing.Point(10, 158);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Descripción:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 251);
+            this.label4.Location = new System.Drawing.Point(10, 204);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 25;
             this.label4.Text = "Monto:";
             // 
             // numMonto
             // 
-            this.numMonto.Location = new System.Drawing.Point(105, 251);
+            this.numMonto.Location = new System.Drawing.Point(79, 204);
+            this.numMonto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numMonto.Name = "numMonto";
-            this.numMonto.Size = new System.Drawing.Size(107, 22);
+            this.numMonto.Size = new System.Drawing.Size(80, 20);
             this.numMonto.TabIndex = 26;
             // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(105, 300);
+            this.dtpFecha.Location = new System.Drawing.Point(79, 244);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(242, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(182, 20);
             this.dtpFecha.TabIndex = 27;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 300);
+            this.label5.Location = new System.Drawing.Point(10, 244);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 28;
             this.label5.Text = "Fecha:";
             // 
             // FrmRegistrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 523);
+            this.ClientSize = new System.Drawing.Size(732, 425);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.numMonto);
@@ -141,8 +150,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmRegistrar";
             this.Text = "FrmRegistrar";
+            this.Load += new System.EventHandler(this.FrmRegistrar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numMonto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

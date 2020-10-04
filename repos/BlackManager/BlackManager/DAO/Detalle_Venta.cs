@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackManager.GUI.Ptueba
+namespace BlackManager.DAO
 {
-    class rueba
+    class Detalle_Venta
     {
     }
 }

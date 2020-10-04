@@ -67,6 +67,8 @@
     <Compile Include="DAO\DAO_Proveedor.cs" />
     <Compile Include="DAO\DAO_Marca.cs" />
     <Compile Include="DAO\DAO_Metodo_Pago.cs" />
+    <Compile Include="DAO\DAO_Venta.cs" />
+    <Compile Include="DAO\Detalle_Venta.cs" />
     <Compile Include="GUI\Gasto\FrmRegistrar_Gasato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +81,6 @@
     <Compile Include="GUI\Gasto\FrmRegistrar_Gasto.Designer.cs">
       <DependentUpon>FrmRegistrar_Gasto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Ptueba\rueba.cs" />
     <Compile Include="GUI\Stock\FrmActualizar_Precio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,10 +111,12 @@
     <Compile Include="GUI\Ventas\FrmRegistrar_Ventas.Designer.cs">
       <DependentUpon>FrmRegistrar_Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica Negocio\Detalle_Venta.cs" />
     <Compile Include="Logica Negocio\Marca.cs" />
     <Compile Include="Logica Negocio\Metodo_Pago.cs" />
     <Compile Include="Logica Negocio\Producto.cs" />
     <Compile Include="Logica Negocio\Proveedor.cs" />
+    <Compile Include="Logica Negocio\Venta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reutilizables\Reusar.cs" />

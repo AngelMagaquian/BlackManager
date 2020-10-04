@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BlackManager.GUI.Compras
+namespace BlackManager.GUI.Gasto
 {
     public partial class FrmRegistrar : Form
     {
         public FrmRegistrar()
         {
             InitializeComponent();
+        }
+
+        private void FrmRegistrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

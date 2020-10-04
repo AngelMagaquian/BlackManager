@@ -1,4 +1,4 @@
-﻿namespace BlackManager.Formularios.Stock
+﻿namespace BlackManager.GUI.Stock
 {
     partial class FrmActualizar_Precio
     {

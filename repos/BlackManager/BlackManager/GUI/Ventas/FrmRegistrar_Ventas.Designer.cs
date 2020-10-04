@@ -1,4 +1,4 @@
-﻿namespace BlackManager
+﻿namespace BlackManager.GUI.Ventas
 {
     partial class FrmRegistar_Venta
     {

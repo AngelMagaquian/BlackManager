@@ -10,7 +10,7 @@ using BlackManager.Reutilizables;
 using System.Windows.Forms;
 using BlackManager.Logic;
 
-namespace BlackManager.Formularios.Stock
+namespace BlackManager.GUI.Stock
 {
     public partial class FrmRegistar_Stock : Form
     {

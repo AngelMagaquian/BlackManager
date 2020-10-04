@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace BlackManager.Formularios.Stock
+namespace BlackManager.GUI.Stock
 {
     public partial class FrmActualizar_Precio : Form
     {

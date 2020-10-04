@@ -16,5 +16,10 @@ namespace BlackManager.GUI.Ventas
         {
             InitializeComponent();
         }
+
+        private void FrmConsultar_Ventas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

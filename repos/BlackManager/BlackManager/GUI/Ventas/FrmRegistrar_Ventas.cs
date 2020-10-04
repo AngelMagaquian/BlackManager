@@ -11,9 +11,8 @@ using System.Windows.Forms;
 using BlackManager.Logic;
 using BlackManager.Reutilizables;
 using BlackManager.Logica_Negocio;
-using BlackManager.Formularios.Stock;
 
-namespace BlackManager
+namespace BlackManager.GUI.Ventas
 {
     public partial class FrmRegistar_Venta : Form
     {
