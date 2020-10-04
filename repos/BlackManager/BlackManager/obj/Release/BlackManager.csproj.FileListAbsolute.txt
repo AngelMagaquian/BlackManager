@@ -1,0 +1,15 @@
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Release\BlackManager.exe.config
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Release\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Release\BlackManager.pdb
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Gasto.FrmRegistrar.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Gasto.FrmRegistrar_Comprar.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Stock.FrmActualizar_Precio.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Stock.FrmConsultar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Stock.FrmRegistar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Ventas.FrmConsultar_Ventas.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.GUI.Ventas.FrmRegistar_Venta.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.Properties.Resources.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.csproj.GenerateResource.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Release\BlackManager.pdb

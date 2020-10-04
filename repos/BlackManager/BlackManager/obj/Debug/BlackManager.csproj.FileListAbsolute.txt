@@ -13,3 +13,19 @@ D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\ob
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Stock.FrmConsultar_Stock.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Stock.FrmRegistar_Stock.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Ventas.FrmRegistar_Venta.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe.config
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\bin\Debug\BlackManager.pdb
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csprojAssemblyReference.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Gasto.FrmRegistrar.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Gasto.FrmRegistrar_Comprar.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Stock.FrmActualizar_Precio.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Stock.FrmConsultar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Stock.FrmRegistar_Stock.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Ventas.FrmConsultar_Ventas.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.GUI.Ventas.FrmRegistar_Venta.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.Properties.Resources.resources
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.GenerateResource.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.exe
+C:\Users\angel\source\repos\BlackManager\BlackManager\obj\Debug\BlackManager.pdb

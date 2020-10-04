@@ -21,7 +21,7 @@ namespace BlackManager.DAO
         private TipoConexion connType = TipoConexion.comun;
         private EstadoTransaccion connEstado = EstadoTransaccion.exito;
         private String cadConexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " +
-            ".\\..\\BDKiosco.accdb";
+            "C:\\?Users\\ange\\source\\repos\\BlackManager\\BlackManager\\bin\\BDKiosco.accdb";
 
         private readonly static BDhelper _instance = new BDhelper();
 
