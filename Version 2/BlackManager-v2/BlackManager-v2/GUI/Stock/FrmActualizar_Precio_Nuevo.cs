@@ -34,5 +34,11 @@ namespace BlackManager_v2.GUI.Stock
             txtMarca.Text = producto.id_marca.ToString();
             txtPrecioAnterior.Text = producto.precio.ToString();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (producto.ActualizarPrecio(producto.Id, double.Parse(numPrecio.Value.ToString())))
+                MessageBox.Show("Precio actualizado con exito", "Actualizacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

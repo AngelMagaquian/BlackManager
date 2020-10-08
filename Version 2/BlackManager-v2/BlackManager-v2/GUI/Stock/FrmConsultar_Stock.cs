@@ -16,5 +16,15 @@ namespace BlackManager_v2.GUI.Stock
         {
             InitializeComponent();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmConsultar_Stock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

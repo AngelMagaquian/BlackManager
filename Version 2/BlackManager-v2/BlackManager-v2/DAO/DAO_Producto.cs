@@ -98,7 +98,7 @@ namespace BlackManager_v2.DAO
             return nuevo;
         }
 
-        internal void ActualizarPrecio(long id_producto, double precio)
+        /*internal void ActualizarPrecio(long id_producto, double precio)
         {
             string sql = string.Concat("Insert INTO Producto",
                                         "           ([precio])",
@@ -115,6 +115,24 @@ namespace BlackManager_v2.DAO
 
             if (rtdo > 0)
                 MessageBox.Show("Precio actualizado con exito", "Actualizacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        } */
+
+        internal bool UpdatePrecio (long id_producto, double nuevoPrecio)
+        {
+            string sql = string.Concat("UPDATE Producto p SET p.precio = @precio" +
+                                        "WHERE p.id_producto = @id_prodcuto");
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("precio", nuevoPrecio);
+            parametros.Add("id_producto", id_producto);
+            BDHelper.Instance.ConectarTransaccion();
+            int rto = BDHelper.Instance.EjecutarSQL(sql, parametros);
+            BDHelper.Instance.Desconectar();
+
+            if (rto > 0)
+                return true;
+            else
+                return false;
+
         }
     }
 }

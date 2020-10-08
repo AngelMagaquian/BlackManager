@@ -80,5 +80,10 @@ namespace BlackManager_v2.Logica_Negocio
         {
             return oProducto.GetByMarca(marca);
         }
+
+        public bool ActualizarPrecio(long id_prod, double nuevoPrecio)
+        {
+            return oProducto.UpdatePrecio(id_prod, nuevoPrecio);
+        }
     }
 }

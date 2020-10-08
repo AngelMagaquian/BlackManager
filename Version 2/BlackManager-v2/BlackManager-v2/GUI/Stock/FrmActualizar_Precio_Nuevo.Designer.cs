@@ -42,86 +42,96 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(99, 124);
+            this.txtMarca.Location = new System.Drawing.Point(74, 101);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.ReadOnly = true;
-            this.txtMarca.Size = new System.Drawing.Size(271, 22);
+            this.txtMarca.Size = new System.Drawing.Size(204, 20);
             this.txtMarca.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 124);
+            this.label2.Location = new System.Drawing.Point(14, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Marca:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(99, 75);
+            this.txtNombre.Location = new System.Drawing.Point(74, 61);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(271, 22);
+            this.txtNombre.Size = new System.Drawing.Size(204, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 75);
+            this.label1.Location = new System.Drawing.Point(14, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre:";
             // 
             // txtPrecioAnterior
             // 
-            this.txtPrecioAnterior.Location = new System.Drawing.Point(131, 177);
+            this.txtPrecioAnterior.Location = new System.Drawing.Point(98, 144);
+            this.txtPrecioAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecioAnterior.Name = "txtPrecioAnterior";
             this.txtPrecioAnterior.ReadOnly = true;
-            this.txtPrecioAnterior.Size = new System.Drawing.Size(239, 22);
+            this.txtPrecioAnterior.Size = new System.Drawing.Size(180, 20);
             this.txtPrecioAnterior.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 177);
+            this.label3.Location = new System.Drawing.Point(14, 144);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 17);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Precio Anterior:";
             // 
             // numPrecio
             // 
             this.numPrecio.DecimalPlaces = 2;
-            this.numPrecio.Location = new System.Drawing.Point(114, 246);
+            this.numPrecio.Location = new System.Drawing.Point(86, 200);
+            this.numPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(107, 22);
+            this.numPrecio.Size = new System.Drawing.Size(80, 20);
             this.numPrecio.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 248);
+            this.label4.Location = new System.Drawing.Point(11, 202);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Nuevo Precio";
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(131, 322);
+            this.btnActualizar.Location = new System.Drawing.Point(98, 262);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(116, 46);
+            this.btnActualizar.Size = new System.Drawing.Size(87, 37);
             this.btnActualizar.TabIndex = 13;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // FrmActualizar_Precio_Nuevo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 424);
+            this.ClientSize = new System.Drawing.Size(353, 344);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.label4);
@@ -131,6 +141,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmActualizar_Precio_Nuevo";
             this.Text = "FrmActualizar_Precio_Nuevo";
             this.Load += new System.EventHandler(this.FrmActualizar_Precio_Nuevo_Load);
