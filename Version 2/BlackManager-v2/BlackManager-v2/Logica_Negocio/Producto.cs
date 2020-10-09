@@ -13,6 +13,7 @@ namespace BlackManager_v2.Logica_Negocio
     {
         private long id;
         public int id_marca { get; set; }
+        public string nom_marca { get; set; } //Asignamos nombre a la marca
         public string nombre { get; set; }
         public string tipo { get; set; }
         public double precio { get; set; }
@@ -70,10 +71,7 @@ namespace BlackManager_v2.Logica_Negocio
         {
             Producto objProd = new Producto();
             IList<Producto> todosProductos = objProd.ObtenerXMarca(marca);
-            foreach (Producto p in todosProductos)
-            {
-                grilla.Rows.Add(p.id, p.nombre, p.precio);
-            }
+            grilla.DataSource = todosProductos;
         }
 
         private IList<Producto> ObtenerXMarca(int marca)

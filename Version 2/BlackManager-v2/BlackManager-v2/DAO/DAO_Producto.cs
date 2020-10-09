@@ -15,7 +15,9 @@ namespace BlackManager_v2.DAO
         public IList<Producto> GetAll()
         {
             List<Producto> listaProductos = new List<Producto>();
-            var tablaProdu = BDHelper.Instance.ConsultarTabla("Producto");
+            string sql = "Select p.id_producto, p.nombre,p.id_marca, m.nombre AS 'NomMarca', p.tipo, p.precio, p.cantidad" +
+                        "From Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca)";
+            var tablaProdu = BDHelper.Instance.ConsultarSQL(sql);
             foreach (DataRow fila in tablaProdu.Rows)
             {
                 listaProductos.Add(Mappeo(fila));
@@ -27,7 +29,9 @@ namespace BlackManager_v2.DAO
         public IList<Producto> GetByMarca(int marca)
         {
             List<Producto> listaProductos = new List<Producto>();
-            string sql = "SELECT * FROM Producto p WHERE p.id_marca = @marca";
+            string sql = "SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
+                        "FROM Producto p INNER JOIN Marca m (p.id_marca=m.id_marca) " +
+                        "WHERE m.id_marca = @marca";
             var parametros = new Dictionary<string, object>();
             parametros.Add("marca", marca);
             var tablaProdu = BDHelper.Instance.ConsultarSQL(sql, parametros);
@@ -45,6 +49,7 @@ namespace BlackManager_v2.DAO
             Producto miProducto = new Producto();
             miProducto.Id = long.Parse(produ["id_producto"].ToString());
             miProducto.id_marca = int.Parse(produ["id_marca"].ToString());
+            miProducto.nom_marca = produ["NomMarca"].ToString();
             miProducto.nombre = produ["nombre"].ToString();
             miProducto.precio = double.Parse(produ["precio"].ToString());
             miProducto.cantidad = int.Parse(produ["cantidad"].ToString());

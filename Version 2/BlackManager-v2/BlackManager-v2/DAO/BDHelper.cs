@@ -160,5 +160,23 @@ namespace BlackManager_v2.DAO
             }
             return tabla;
         }
+
+        //Este tipo de consulta la utilizamos para seguir la transaccion y obtener el ultima ID
+        public object ConsultaSQLScalar(string strSql)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            try
+            {
+                cmd.Connection = dbConnection;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
+                cmd.CommandText = strSql;
+                return cmd.ExecuteScalar();
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("Error en la insercion de un detalle " + ex.Message, "Fallo en insercion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

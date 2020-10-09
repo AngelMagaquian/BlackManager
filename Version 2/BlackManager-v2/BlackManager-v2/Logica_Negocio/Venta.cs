@@ -8,6 +8,14 @@ namespace BlackManager_v2.Logica_Negocio
 {
     class Venta
     {
-        //private IList<Detalle_Venta> detalles;
+        private int id;
+        public int id_metodo_pago { get; set; }
+        public string nom_metodo_pago { get; set; }
+        public DateTime fecha { get; set; }
+        public double monto { get; set; }
+        public List<Detalle_Venta> detalle { get; set; }
+        public int Id { get => id; set => id = value; }
+
+
     }
 }
