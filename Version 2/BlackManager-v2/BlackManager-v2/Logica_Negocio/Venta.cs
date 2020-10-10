@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackManager_v2.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,17 @@ namespace BlackManager_v2.Logica_Negocio
         public string nom_metodo_pago { get; set; }
         public DateTime fecha { get; set; }
         public double monto { get; set; }
-        public List<Detalle_Venta> detalle { get; set; }
+        public IList<Detalle_Venta> detalle { get; set; }
         public int Id { get => id; set => id = value; }
 
-
+        public void AgregarVenta(int metPag, double monto, List<Detalle_Venta> detalles)
+        {
+            Venta nueva = new Venta();
+            nueva.id_metodo_pago = metPag;
+            nueva.fecha = DateTime.Today;
+            nueva.monto = monto;
+            DAO_Venta oVenta = new DAO_Venta();
+            oVenta.InsertVenta(nueva, detalles);
+        }
     }
 }

@@ -176,6 +176,7 @@ namespace BlackManager_v2.DAO
             catch (OleDbException ex)
             {
                 MessageBox.Show("Error en la insercion de un detalle " + ex.Message, "Fallo en insercion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
     }
