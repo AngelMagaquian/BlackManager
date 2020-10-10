@@ -15,7 +15,7 @@ namespace BlackManager_v2.DAO
         public IList<Producto> GetAll()
         {
             List<Producto> listaProductos = new List<Producto>();
-            string sql = "Select p.id_producto, p.nombre,p.id_marca, m.nombre AS 'NomMarca', p.tipo, p.precio, p.cantidad" +
+            string sql = "Select p.id_producto, p.nombre,p.id_marca, m.nombre AS 'NomMarca', p.tipo, p.precio, p.cantidad " +
                         "From Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca)";
             var tablaProdu = BDHelper.Instance.ConsultarSQL(sql);
             foreach (DataRow fila in tablaProdu.Rows)
@@ -49,7 +49,7 @@ namespace BlackManager_v2.DAO
             Producto miProducto = new Producto();
             miProducto.Id = long.Parse(produ["id_producto"].ToString());
             miProducto.id_marca = int.Parse(produ["id_marca"].ToString());
-            miProducto.nom_marca = produ["NomMarca"].ToString();
+            miProducto.nom_marca = produ["'NomMarca'"].ToString();
             miProducto.nombre = produ["nombre"].ToString();
             miProducto.precio = double.Parse(produ["precio"].ToString());
             miProducto.cantidad = int.Parse(produ["cantidad"].ToString());
@@ -124,7 +124,7 @@ namespace BlackManager_v2.DAO
 
         internal bool UpdatePrecio (long id_producto, double nuevoPrecio)
         {
-            string sql = string.Concat("UPDATE Producto p SET p.precio = @precio" +
+            string sql = string.Concat("UPDATE Producto p SET p.precio = @precio " +
                                         "WHERE p.id_producto = @id_prodcuto");
             var parametros = new Dictionary<string, object>();
             parametros.Add("precio", nuevoPrecio);

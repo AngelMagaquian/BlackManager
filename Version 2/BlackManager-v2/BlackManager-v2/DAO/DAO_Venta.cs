@@ -28,8 +28,9 @@ namespace BlackManager_v2.DAO
             parmetros.Add("montoFinal", venta.monto);
             BDHelper.Instance.ConectarTransaccion();
             BDHelper.Instance.EjecutarSQL(sql, parmetros);
-            int id_venta = int.Parse(BDHelper.Instance.ConsultaSQLScalar("@@IDENTITY").ToString());
+            var id_v = BDHelper.Instance.ConsultaSQLScalar("SELECT @@IDENTITY FROM Venta");
 
+            int id_venta = Convert.ToInt32(id_v);
             foreach (Detalle_Venta det in detalles)
             {
                 DAO_Detalle_Venta.InsertDetalle(id_venta, det);

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BlackManager_v2.Logica_Negocio
 {
@@ -25,6 +26,16 @@ namespace BlackManager_v2.Logica_Negocio
             nuevoDetalle.id_producto = long.Parse(data["id_producto"].ToString());
             nuevoDetalle.cantidad = int.Parse(data["stock"].ToString());
             nuevoDetalle.subtotal = double.Parse(data["subtotal"].ToString());
+            return nuevoDetalle;
+        }
+
+        public static Detalle_Venta Parse(DataGridViewRow data)
+        {
+            Detalle_Venta nuevoDetalle = new Detalle_Venta();
+
+            nuevoDetalle.id_producto = long.Parse(data.Cells["cod_prod"].ToString());
+            nuevoDetalle.cantidad = int.Parse(data.Cells["cantidad"].ToString());
+            nuevoDetalle.subtotal = double.Parse(data.Cells["subtot"].ToString());
             return nuevoDetalle;
         }
     }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BlackManager_v2.GUI.Stock;
 using BlackManager_v2.GUI.Gastos;
+using BlackManager_v2.Logica_Negocio;
 
 namespace BlackManager_v2.GUI.Ventas
 {
@@ -25,7 +26,45 @@ namespace BlackManager_v2.GUI.Ventas
             Metodo_Pago miMP = new Metodo_Pago();
             Reutilizable.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id");
         }
+        private void txtCodigo_Producto_TextChanged(object sender, EventArgs e)
+        {
+            Producto prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
+            AgregarProductoAGrilla(prod);
+        }
 
+        private void AgregarProductoAGrilla(Producto p)
+        {
+            int row = ExisteProd(p.Id);
+            if (row != -1)
+            {
+                dgvResumen.Rows.Add(p.Id, p.nombre, p.nom_marca, 1, p.precio, p.precio);
+                p.cantidad -= 1;
+            }
+            else
+            {
+                int actual = int.Parse(dgvResumen.Rows[row].Cells["cantidad"].Value.ToString());
+                p.cantidad -= 1;
+                actual += 1;
+                dgvResumen.Rows[row].Cells["cantidad"].Value = actual;
+                double subtotal = (double)p.cantidad * p.precio;
+                dgvResumen.Rows[row].Cells["subtot"].Value = subtotal;
+            }
+            
+        }
+
+        private int ExisteProd(long id_prod)
+        {
+            for (int i=0; i < dgvResumen.Rows.Count; i++)
+            {
+                if (id_prod - long.Parse(dgvResumen.Rows[i].Cells["id_prod"].Value.ToString()) == 0)
+                    return i;
+            }
+            return -1;
+        }
+        private void btnConfirmar_Venta_Click(object sender, EventArgs e)
+        {
+
+        }
         private void consultarVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultar_Ventas ventana = new FrmConsultar_Ventas();

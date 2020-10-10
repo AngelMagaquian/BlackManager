@@ -34,5 +34,17 @@ namespace BlackManager_v2.DAO
 
             return miMP;
         }
+
+        public Metodo_Pago GetByID(int id)
+        {
+            Metodo_Pago nuevo;
+            string sql = "SELECT * FROM Metodo_Pago m WHERE m.id_metodo_de_pago = @id";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id_producto", id);
+
+            var tablaMP = BDHelper.Instance.ConsultarSQL(sql, parametros);
+            nuevo = Mappeo(tablaMP.Rows[0]);
+            return nuevo;
+        }
     }
 }

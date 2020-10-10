@@ -63,7 +63,8 @@ namespace BlackManager_v2.Logica_Negocio
             IList<Producto> todosProductos = objProd.ObtenerTodos();
             foreach (Producto p in todosProductos)
             {
-                grilla.Rows.Add(p.id, p.nombre, p.tipo, p.precio, p.cantidad);
+                grilla.Rows.Add(p.id, p.nombre, p.nom_marca, p.cantidad, p.precio);
+                //grilla.Rows[0].Cells["subtot"].Value = (double)p.cantidad * p.precio;
             }
         }
 

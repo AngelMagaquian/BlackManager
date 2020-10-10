@@ -38,5 +38,10 @@ namespace BlackManager.Logica_Negocio
         {
             return oMetodo_Pago.GetAll();
         }
+
+        public Metodo_Pago ObtenerPorID(int id)
+        {
+            return oMetodo_Pago.GetByID(id);
+        }
     }
 }

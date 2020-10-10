@@ -111,6 +111,7 @@ namespace BlackManager_v2.DAO
                 dbCommand.CommandType = CommandType.Text;
                 //Establecemos todo el sql pasado por parametro
                 dbCommand.CommandText = ejecutar;
+                dbCommand.Parameters.Clear();
 
                 //Verificamos si hay parametros y los parseamos
                 if (parametros != null)
@@ -164,14 +165,11 @@ namespace BlackManager_v2.DAO
         //Este tipo de consulta la utilizamos para seguir la transaccion y obtener el ultima ID
         public object ConsultaSQLScalar(string strSql)
         {
-            OleDbCommand cmd = new OleDbCommand();
             try
             {
-                cmd.Connection = dbConnection;
-                cmd.CommandType = CommandType.Text;
                 // Establece la instrucción a ejecutar
-                cmd.CommandText = strSql;
-                return cmd.ExecuteScalar();
+                dbCommand.CommandText = strSql;
+                return dbCommand.ExecuteScalar();
             }
             catch (OleDbException ex)
             {

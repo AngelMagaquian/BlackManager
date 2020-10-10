@@ -31,7 +31,7 @@ namespace BlackManager_v2.GUI.Stock
         private void LlenarForm()
         {
             txtNombre.Text = producto.nombre;
-            txtMarca.Text = producto.id_marca.ToString();
+            txtMarca.Text = producto.nom_marca;
             txtPrecioAnterior.Text = producto.precio.ToString();
         }
 
