@@ -58,7 +58,7 @@
             // 
             // btnComprasHoy
             // 
-            this.btnComprasHoy.Location = new System.Drawing.Point(737, 342);
+            this.btnComprasHoy.Location = new System.Drawing.Point(812, 346);
             this.btnComprasHoy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComprasHoy.Name = "btnComprasHoy";
             this.btnComprasHoy.Size = new System.Drawing.Size(115, 58);

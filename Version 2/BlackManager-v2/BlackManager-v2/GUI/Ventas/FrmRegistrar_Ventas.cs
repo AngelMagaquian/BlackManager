@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BlackManager_v2.GUI.Stock;
 using BlackManager_v2.GUI.Gastos;
 using BlackManager_v2.Logica_Negocio;
+using BlackManager_v2.GUI.Compras;
 
 namespace BlackManager_v2.GUI.Ventas
 {
@@ -23,8 +24,7 @@ namespace BlackManager_v2.GUI.Ventas
 
         private void FrmRegistrar_Ventas_Load(object sender, EventArgs e)
         {
-            Metodo_Pago miMP = new Metodo_Pago();
-            Reutilizable.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id");
+            defecto();
         }
         private void txtCodigo_Producto_TextChanged(object sender, EventArgs e)
         {
@@ -65,6 +65,27 @@ namespace BlackManager_v2.GUI.Ventas
         {
 
         }
+
+        private void defecto()
+        {
+            //Limpiar Grilla
+            dgvResumen.Rows.Clear();
+            //Limpiar txt y enfocarlo
+            txtCodigo_Producto.Clear();
+            txtCodigo_Producto.Focus();
+            //llenar cbo y dejarlo seleccionando 0
+            Metodo_Pago miMP = new Metodo_Pago();
+            Reutilizable.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id");
+            cboMetodoPago.SelectedIndex = 0;
+            //limpiar lbls de total y vuelto
+            lblTotal.Text = "0.00";
+            lblVuelto.Text = "0.00";
+            //poner el valor por defecto de num
+            numVuelto.Value = 0;
+        }
+
+
+        //------------------------------Tool Strip Menu--------------------------------//
         private void consultarVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultar_Ventas ventana = new FrmConsultar_Ventas();
@@ -75,8 +96,6 @@ namespace BlackManager_v2.GUI.Ventas
 
         private void registrarVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-
             FrmRegistrar_Ventas ventana = new FrmRegistrar_Ventas();
             this.Hide();
             ventana.ShowDialog();
@@ -129,6 +148,22 @@ namespace BlackManager_v2.GUI.Ventas
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+        }
+
+        private void registrarCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistrar_Compra ventana = new FrmRegistrar_Compra();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
+        }
+
+        private void consultarComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           /* FrmRegistrar_Compra ventana = new FrmRegistrar_Compra();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();*/
         }
     }
 }

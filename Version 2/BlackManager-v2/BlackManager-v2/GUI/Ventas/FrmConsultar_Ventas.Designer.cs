@@ -33,15 +33,17 @@
             this.btnComprasHoy = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.dgvResumen = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpHasta
             // 
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(801, 137);
+            this.dtpHasta.Location = new System.Drawing.Point(801, 192);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(131, 22);
@@ -51,7 +53,7 @@
             // 
             this.dtpDesde.CustomFormat = "dd/MM/yyyy";
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(801, 99);
+            this.dtpDesde.Location = new System.Drawing.Point(801, 154);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDesde.MaxDate = new System.DateTime(3009, 12, 31, 0, 0, 0, 0);
             this.dtpDesde.Name = "dtpDesde";
@@ -60,7 +62,7 @@
             // 
             // btnComprasHoy
             // 
-            this.btnComprasHoy.Location = new System.Drawing.Point(801, 253);
+            this.btnComprasHoy.Location = new System.Drawing.Point(801, 308);
             this.btnComprasHoy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComprasHoy.Name = "btnComprasHoy";
             this.btnComprasHoy.Size = new System.Drawing.Size(115, 58);
@@ -70,7 +72,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(939, 103);
+            this.btnBuscar.Location = new System.Drawing.Point(939, 158);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(115, 42);
@@ -82,26 +84,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 28);
+            this.label2.Location = new System.Drawing.Point(12, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 32);
             this.label2.TabIndex = 45;
             this.label2.Text = "Consultar Gastos";
             // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(775, 28);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(239, 32);
-            this.lblTotal.TabIndex = 44;
-            this.lblTotal.Text = "Filtrar por Fecha";
-            // 
             // dgvResumen
             // 
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen.Location = new System.Drawing.Point(18, 86);
+            this.dgvResumen.Location = new System.Drawing.Point(18, 141);
             this.dgvResumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.RowHeadersWidth = 51;
@@ -109,20 +101,53 @@
             this.dgvResumen.Size = new System.Drawing.Size(693, 430);
             this.dgvResumen.TabIndex = 43;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(791, 416);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 32);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Total de Venta:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(853, 471);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(99, 32);
+            this.lblTotal.TabIndex = 51;
+            this.lblTotal.Text = "label3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(797, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 32);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Filtrar por Fecha";
+            // 
             // FrmConsultar_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 598);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.btnComprasHoy);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dgvResumen);
             this.Name = "FrmConsultar_Ventas";
             this.Text = "FrmConsultar_Ventas";
+            this.Load += new System.EventHandler(this.FrmConsultar_Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,7 +161,9 @@
         private System.Windows.Forms.Button btnComprasHoy;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridView dgvResumen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label3;
     }
 }

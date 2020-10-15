@@ -49,7 +49,7 @@ namespace BlackManager_v2.DAO
             Producto miProducto = new Producto();
             miProducto.Id = long.Parse(produ["id_producto"].ToString());
             miProducto.id_marca = int.Parse(produ["id_marca"].ToString());
-            miProducto.nom_marca = produ["'NomMarca'"].ToString();
+            miProducto.nom_marca = produ["'NomMarca'"].ToString(); //Marca error de que no se encuentra en la tabla
             miProducto.nombre = produ["nombre"].ToString();
             miProducto.precio = double.Parse(produ["precio"].ToString());
             miProducto.cantidad = int.Parse(produ["cantidad"].ToString());
@@ -94,7 +94,7 @@ namespace BlackManager_v2.DAO
         internal Producto GetByID(long id)
         {
             Producto nuevo;
-            string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id";
+            string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
             var parametros = new Dictionary<string, object>();
             parametros.Add("id_producto", id);
 

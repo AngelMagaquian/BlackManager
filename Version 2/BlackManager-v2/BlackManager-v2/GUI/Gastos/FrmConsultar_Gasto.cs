@@ -19,7 +19,12 @@ namespace BlackManager_v2.GUI.Gastos
 
         private void FrmConsultar_Gasto_Load(object sender, EventArgs e)
         {
+            Defecto();
+        }
 
+        private void Defecto()
+        {
+            dgvResumen.Rows.Clear();
         }
     }
 }

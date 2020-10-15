@@ -21,5 +21,17 @@ namespace BlackManager_v2.GUI.Gastos
         {
 
         }
+
+        private void FrmRegistrar_Gasato_Load(object sender, EventArgs e)
+        {
+            Defecto();
+        }
+
+        private void Defecto()
+        {
+            txtDescripcion.Clear();
+            txtProducto.Clear();
+            numMonto.Value = 0;
+        }
     }
 }
