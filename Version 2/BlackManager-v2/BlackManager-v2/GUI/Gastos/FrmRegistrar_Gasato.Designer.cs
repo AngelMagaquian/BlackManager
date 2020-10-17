@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 579);
+            this.ClientSize = new System.Drawing.Size(603, 579);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.numMonto);
@@ -148,6 +148,7 @@
             this.Controls.Add(this.btnCargar);
             this.Name = "FrmRegistrar_Gasato";
             this.Text = "FrmRegistrar_Gasato";
+            this.Load += new System.EventHandler(this.FrmRegistrar_Gasato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numMonto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

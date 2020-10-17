@@ -16,5 +16,25 @@ namespace BlackManager_v2.GUI.Compras
         {
             InitializeComponent();
         }
+
+        private void FrmRegistrar_Producto_Comprado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Defecto()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+
+            numCantCaja.Value = 0;
+            numPrecioPorUnidad.Value = 0;
+            numPrecioTotal.Value = 0;
+            numUnidades.Value = 0;
+            numUnidadesPorCaja.Value = 0;
+
+            lblResultado1.Text = "0.00";
+            lblresultado2.Text = "0.00";
+        }
     }
 }

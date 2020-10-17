@@ -17,7 +17,7 @@ namespace BlackManager_v2.Logica_Negocio
         public IList<Detalle_Venta> detalle { get; set; }
         public int Id { get => id; set => id = value; }
 
-        public void AgregarVenta(int metPag, double monto, List<Detalle_Venta> detalles)
+        public static void AgregarVenta(int metPag, double monto, List<Detalle_Venta> detalles)
         {
             Venta nueva = new Venta();
             nueva.id_metodo_pago = metPag;

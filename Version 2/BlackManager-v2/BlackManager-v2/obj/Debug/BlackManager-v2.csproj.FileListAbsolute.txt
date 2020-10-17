@@ -40,3 +40,24 @@ D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackMan
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csproj.CoreCompileInputs.cache
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.exe
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.pdb
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\bin\Debug\BlackManager-v2.exe.config
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\bin\Debug\BlackManager-v2.exe
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\bin\Debug\BlackManager-v2.pdb
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csprojAssemblyReference.cache
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Form1.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Compras.FrmRegistrar_Compra.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Compras.FrmRegistrar_Producto_Comprado.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Gastos.FrmConsultar_Gasto.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Gastos.FrmRegistrar_Gasato.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmActualizar_Precio.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmActualizar_Precio_Nuevo.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmConsultar_Stock.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmNuevo_Producto.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmRegistar_Stock.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Ventas.FrmConsultar_Ventas.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Ventas.FrmRegistrar_Ventas.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Properties.Resources.resources
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csproj.GenerateResource.cache
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csproj.CoreCompileInputs.cache
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.exe
+C:\Users\angel\Desktop\v4\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.pdb
