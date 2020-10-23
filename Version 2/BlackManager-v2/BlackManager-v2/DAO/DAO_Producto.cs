@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,7 +50,7 @@ namespace BlackManager_v2.DAO
             Producto miProducto = new Producto();
             miProducto.Id = long.Parse(produ["id_producto"].ToString());
             miProducto.id_marca = int.Parse(produ["id_marca"].ToString());
-            miProducto.nom_marca = produ["'NomMarca'"].ToString();
+            miProducto.nom_marca = produ["'NomMarca'"].ToString(); //Marca error de que no se encuentra en la tabla
             miProducto.nombre = produ["nombre"].ToString();
             miProducto.precio = double.Parse(produ["precio"].ToString());
             miProducto.cantidad = int.Parse(produ["cantidad"].ToString());
@@ -94,7 +95,7 @@ namespace BlackManager_v2.DAO
         internal Producto GetByID(long id)
         {
             Producto nuevo;
-            string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id";
+            string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
             var parametros = new Dictionary<string, object>();
             parametros.Add("id_producto", id);
 
@@ -137,7 +138,21 @@ namespace BlackManager_v2.DAO
                 return true;
             else
                 return false;
+        }
 
+        internal static int UpdateCantidad(long id_producto, int nuevaCantidad)
+        {
+            string sql = string.Concat("UPDATE Producto p SET p.cantidad = @cantidad " +
+                                        "WHERE p.id_producto = @id_prodcuto");
+
+            Producto p = new DAO_Producto().GetByID(id_producto);
+            int cantidad = p.cantidad + nuevaCantidad;
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("precio", cantidad);
+            parametros.Add("id_producto", id_producto);
+            int rto = BDHelper.Instance.EjecutarSQL(sql, parametros);
+
+            return rto;
         }
     }
 }

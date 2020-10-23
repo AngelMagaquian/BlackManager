@@ -42,7 +42,7 @@
             this.cboMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMarcas.FormattingEnabled = true;
-            this.cboMarcas.Location = new System.Drawing.Point(754, 165);
+            this.cboMarcas.Location = new System.Drawing.Point(754, 186);
             this.cboMarcas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboMarcas.Name = "cboMarcas";
             this.cboMarcas.Size = new System.Drawing.Size(183, 24);
@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 72);
+            this.label1.Location = new System.Drawing.Point(23, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 32);
             this.label1.TabIndex = 19;
@@ -62,7 +62,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(748, 106);
+            this.lblTotal.Location = new System.Drawing.Point(748, 127);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(267, 32);
             this.lblTotal.TabIndex = 18;
@@ -71,7 +71,7 @@
             // dgvResumen
             // 
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen.Location = new System.Drawing.Point(29, 117);
+            this.dgvResumen.Location = new System.Drawing.Point(29, 138);
             this.dgvResumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.RowHeadersWidth = 51;
@@ -81,7 +81,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(943, 155);
+            this.btnBuscar.Location = new System.Drawing.Point(943, 176);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(116, 42);
@@ -91,7 +91,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(943, 293);
+            this.btnActualizar.Location = new System.Drawing.Point(943, 314);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(116, 42);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Name = "FrmRegistar_Stock";
             this.Text = "FrmRegistar_Stock";
+            this.Load += new System.EventHandler(this.FrmRegistar_Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
