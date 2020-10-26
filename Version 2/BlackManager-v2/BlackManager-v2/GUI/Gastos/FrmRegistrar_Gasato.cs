@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackManager_v2.Logica_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,13 @@ namespace BlackManager_v2.GUI.Gastos
             txtDescripcion.Clear();
             txtProducto.Clear();
             numMonto.Value = 0;
+            txtProducto.Focus();
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            Gasto save = Gasto.Parse(txtDescripcion.Text, double.Parse(numMonto.Value.ToString()), txtProducto.Text);
+            save.AgregarGasto(save);
         }
     }
 }

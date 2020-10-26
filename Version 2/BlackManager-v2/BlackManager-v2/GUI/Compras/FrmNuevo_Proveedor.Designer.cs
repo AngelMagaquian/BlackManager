@@ -51,7 +51,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(239, 22);
             this.txtNombre.TabIndex = 55;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label1
             // 
@@ -70,6 +69,7 @@
             this.btnGuardar.TabIndex = 56;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FrmNuevo_Proveedor
             // 
@@ -82,6 +82,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FrmNuevo_Proveedor";
             this.Text = "FrmNuevo_Proveedor";
+            this.Load += new System.EventHandler(this.FrmNuevo_Proveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -44,5 +44,10 @@ namespace BlackManager_v2.Logica_Negocio
                 grilla.Rows.Add(p.id, p.nombre);
             }
         }
+
+        public bool NuevoProveedor(string nombre)
+        {
+            return oProveedor.InsertProv(nombre);
+        }
     }
 }

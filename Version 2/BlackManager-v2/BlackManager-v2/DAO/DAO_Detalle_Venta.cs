@@ -30,6 +30,8 @@ namespace BlackManager.DAO
             parametros.Add("subtotal", detalle.subtotal);
 
             BDHelper.Instance.EjecutarSQL(sql, parametros);
+            DAO_Producto.UpdateCantidad(detalle.Id_producto, detalle.cantidad*-1);
+
         }
 
         public IList<Detalle_Venta> GetAll()

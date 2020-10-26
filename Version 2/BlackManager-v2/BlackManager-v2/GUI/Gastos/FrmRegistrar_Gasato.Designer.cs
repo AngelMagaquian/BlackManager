@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.numMonto = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -41,27 +39,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMonto)).BeginInit();
             this.SuspendLayout();
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 322);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Fecha:";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(156, 322);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(241, 22);
-            this.dtpFecha.TabIndex = 37;
-            // 
             // numMonto
             // 
-            this.numMonto.Location = new System.Drawing.Point(156, 273);
+            this.numMonto.Location = new System.Drawing.Point(112, 219);
             this.numMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numMonto.Name = "numMonto";
             this.numMonto.Size = new System.Drawing.Size(107, 22);
@@ -70,7 +50,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 273);
+            this.label4.Location = new System.Drawing.Point(20, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 35;
@@ -78,7 +58,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(156, 216);
+            this.txtDescripcion.Location = new System.Drawing.Point(112, 162);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(241, 22);
@@ -87,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 216);
+            this.label3.Location = new System.Drawing.Point(20, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 33;
@@ -95,7 +75,7 @@
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(156, 164);
+            this.txtProducto.Location = new System.Drawing.Point(112, 110);
             this.txtProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(241, 22);
@@ -104,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 164);
+            this.label2.Location = new System.Drawing.Point(20, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 31;
@@ -114,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 102);
+            this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(243, 32);
             this.label1.TabIndex = 30;
@@ -123,21 +103,20 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(110, 399);
+            this.btnCargar.Location = new System.Drawing.Point(112, 282);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(131, 59);
             this.btnCargar.TabIndex = 29;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // FrmRegistrar_Gasato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 579);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtpFecha);
+            this.ClientSize = new System.Drawing.Size(368, 371);
             this.Controls.Add(this.numMonto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescripcion);
@@ -156,9 +135,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.NumericUpDown numMonto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcion;

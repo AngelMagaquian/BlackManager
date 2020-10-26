@@ -41,7 +41,7 @@
             // dtpHasta
             // 
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(737, 226);
+            this.dtpHasta.Location = new System.Drawing.Point(717, 136);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(131, 22);
@@ -50,7 +50,7 @@
             // dtpDesde
             // 
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(737, 188);
+            this.dtpDesde.Location = new System.Drawing.Point(717, 92);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(131, 22);
@@ -58,20 +58,20 @@
             // 
             // btnComprasHoy
             // 
-            this.btnComprasHoy.Location = new System.Drawing.Point(812, 346);
+            this.btnComprasHoy.Location = new System.Drawing.Point(717, 233);
             this.btnComprasHoy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComprasHoy.Name = "btnComprasHoy";
-            this.btnComprasHoy.Size = new System.Drawing.Size(115, 58);
+            this.btnComprasHoy.Size = new System.Drawing.Size(131, 58);
             this.btnComprasHoy.TabIndex = 47;
             this.btnComprasHoy.Text = "Ver Compras de Hoy";
             this.btnComprasHoy.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(875, 192);
+            this.btnBuscar.Location = new System.Drawing.Point(717, 171);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(115, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(131, 42);
             this.btnBuscar.TabIndex = 46;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 82);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 32);
             this.label2.TabIndex = 45;
@@ -90,7 +90,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(711, 117);
+            this.lblTotal.Location = new System.Drawing.Point(711, 43);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(239, 32);
             this.lblTotal.TabIndex = 44;
@@ -99,7 +99,7 @@
             // dgvResumen
             // 
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen.Location = new System.Drawing.Point(12, 117);
+            this.dgvResumen.Location = new System.Drawing.Point(12, 43);
             this.dgvResumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.RowHeadersWidth = 51;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 597);
+            this.ClientSize = new System.Drawing.Size(951, 597);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.btnComprasHoy);

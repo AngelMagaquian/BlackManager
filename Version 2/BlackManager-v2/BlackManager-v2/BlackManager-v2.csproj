@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DAO\BDHelper.cs" />
     <Compile Include="DAO\DAO_Compra.cs" />
+    <Compile Include="DAO\DAO_Gasto.cs" />
     <Compile Include="DAO\DAO_Marca.cs" />
     <Compile Include="DAO\DAO_Metodo_Pago.cs" />
     <Compile Include="DAO\DAO_Producto.cs" />
@@ -138,6 +139,7 @@
     </Compile>
     <Compile Include="Logica_Negocio\Compra.cs" />
     <Compile Include="Logica_Negocio\Detalle_Venta.cs" />
+    <Compile Include="Logica_Negocio\Gasto.cs" />
     <Compile Include="Logica_Negocio\Marca.cs" />
     <Compile Include="Logica_Negocio\Metodo_Pago.cs" />
     <Compile Include="Logica_Negocio\Producto.cs" />

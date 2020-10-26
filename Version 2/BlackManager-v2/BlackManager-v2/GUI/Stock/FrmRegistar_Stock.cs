@@ -97,7 +97,8 @@ namespace BlackManager_v2.GUI.Stock
 
         private void FrmRegistar_Stock_Load(object sender, EventArgs e)
         {
-
+            Marca all = new Marca();
+            Reutilizable.LlenarCombo(cboMarcas, all.ObtenerTodos(), "nombre", "id");
         }
 
         private void Defecto()
@@ -107,6 +108,13 @@ namespace BlackManager_v2.GUI.Stock
             Reutilizable.LlenarCombo(cboMarcas, marcas.ObtenerTodos(), "nombre", "id");
             cboMarcas.SelectedIndex = 0;
             //se debe llenar la grilla tmb
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvResumen.Rows.Clear();
+            Producto.Llenar_Grilla_Marca(dgvResumen, int.Parse(cboMarcas.SelectedValue.ToString()));
+            dgvResumen.Refresh();
         }
     }
 }

@@ -28,10 +28,18 @@ namespace BlackManager_v2.GUI.Ventas
         }
         private void txtCodigo_Producto_TextChanged(object sender, EventArgs e)
         {
-            Producto prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
-            AgregarProductoAGrilla(prod);
+            try //Busca el producto en la bd y si lo encuentra lo añade a la grilla, sino muestra mensaje de error.
+            {
+                Producto prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
+                AgregarProductoAGrilla(prod);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("El codigo del producto no existe en la base de datos", 
+                    "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+        
         private void AgregarProductoAGrilla(Producto p)
         {
             int row = ExisteProd(p.Id);
@@ -180,6 +188,11 @@ namespace BlackManager_v2.GUI.Ventas
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            defecto();
         }
     }
 }

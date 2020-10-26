@@ -46,7 +46,7 @@
             // 
             // btrAct_Rapida
             // 
-            this.btrAct_Rapida.Location = new System.Drawing.Point(903, 560);
+            this.btrAct_Rapida.Location = new System.Drawing.Point(874, 431);
             this.btrAct_Rapida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btrAct_Rapida.Name = "btrAct_Rapida";
             this.btrAct_Rapida.Size = new System.Drawing.Size(131, 59);
@@ -56,17 +56,17 @@
             // 
             // numPorcentaje
             // 
-            this.numPorcentaje.Location = new System.Drawing.Point(720, 578);
+            this.numPorcentaje.Location = new System.Drawing.Point(722, 450);
             this.numPorcentaje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numPorcentaje.Name = "numPorcentaje";
-            this.numPorcentaje.Size = new System.Drawing.Size(165, 22);
+            this.numPorcentaje.Size = new System.Drawing.Size(113, 22);
             this.numPorcentaje.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(711, 480);
+            this.label2.Location = new System.Drawing.Point(711, 375);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 32);
             this.label2.TabIndex = 35;
@@ -146,7 +146,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(903, 173);
+            this.btnFiltrar.Location = new System.Drawing.Point(720, 241);
             this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(115, 42);
@@ -157,10 +157,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(903, 313);
+            this.button1.Location = new System.Drawing.Point(874, 241);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 73);
+            this.button1.Size = new System.Drawing.Size(115, 42);
             this.button1.TabIndex = 38;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;

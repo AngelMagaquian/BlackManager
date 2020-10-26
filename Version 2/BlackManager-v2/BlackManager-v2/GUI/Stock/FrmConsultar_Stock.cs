@@ -24,7 +24,9 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-
+            dgvResumen.Rows.Clear();
+            Producto.Llenar_Grilla_Marca(dgvResumen, int.Parse(cboMarcas.SelectedValue.ToString()));
+            dgvResumen.Refresh();
         }
 
         private void FrmConsultar_Stock_Load(object sender, EventArgs e)
