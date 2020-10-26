@@ -173,5 +173,13 @@ namespace BlackManager_v2.GUI.Ventas
             ventana.ShowDialog();
             this.Show();*/
         }
+
+        private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNuevo_Proveedor ventana = new FrmNuevo_Proveedor();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
+        }
     }
 }

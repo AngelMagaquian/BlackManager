@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,14 +94,23 @@ namespace BlackManager_v2.DAO
 
         internal Producto GetByID(long id)
         {
-            Producto nuevo;
-            string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
-            var parametros = new Dictionary<string, object>();
-            parametros.Add("id_producto", id);
+            try
+            {
+                Producto nuevo;
+                string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
+                var parametros = new Dictionary<string, object>();
+                parametros.Add("id_producto", id);
 
-            var tablaProd = BDHelper.Instance.ConsultarSQL(sql, parametros);
-            nuevo = Mappeo(tablaProd.Rows[0]);
-            return nuevo;
+                var tablaProd = BDHelper.Instance.ConsultarSQL(sql, parametros);
+                nuevo = Mappeo(tablaProd.Rows[0]);
+                return nuevo;
+
+            }
+            catch 
+            {
+                return null;
+            }
+            
         }
 
         /*internal void ActualizarPrecio(long id_producto, double precio)
@@ -143,8 +153,11 @@ namespace BlackManager_v2.DAO
         {
             string sql = string.Concat("UPDATE Producto p SET p.cantidad = @cantidad " +
                                         "WHERE p.id_producto = @id_prodcuto");
+
+            Producto p = new DAO_Producto().GetByID(id_producto);
+            int cantidad = p.cantidad + nuevaCantidad;
             var parametros = new Dictionary<string, object>();
-            parametros.Add("precio", nuevaCantidad);
+            parametros.Add("precio", cantidad);
             parametros.Add("id_producto", id_producto);
             int rto = BDHelper.Instance.EjecutarSQL(sql, parametros);
 

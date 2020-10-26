@@ -21,6 +21,7 @@ namespace BlackManager_v2.Logica_Negocio
         public long Id { get => id; set => id = value; }
 
         DAO_Producto oProducto;
+
         public Producto()
         {
             oProducto = new DAO_Producto();

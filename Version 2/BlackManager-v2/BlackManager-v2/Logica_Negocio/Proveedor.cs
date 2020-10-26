@@ -20,9 +20,15 @@ namespace BlackManager_v2.Logica_Negocio
             oProveedor = new DAO_Proveedor();
         }
 
-        private IList<Proveedor> ObtenerTodos()
+        public static IList<Proveedor> ObtenerTodos()
         {
-           return oProveedor.GetAll();
+            DAO_Proveedor objProv = new DAO_Proveedor();
+            return objProv.GetAll();
+        }
+
+        private IList<Proveedor> GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public override string ToString()
@@ -31,8 +37,8 @@ namespace BlackManager_v2.Logica_Negocio
         }
         public static void LlenarGrilla(DataGridView grilla)
         {
-            Proveedor objProv = new Proveedor();
-            IList<Proveedor> todosProveedores = objProv.ObtenerTodos();
+            DAO_Proveedor objProv = new DAO_Proveedor();
+            IList<Proveedor> todosProveedores = objProv.GetAll();
             foreach (Proveedor p in todosProveedores)
             {
                 grilla.Rows.Add(p.id, p.nombre);

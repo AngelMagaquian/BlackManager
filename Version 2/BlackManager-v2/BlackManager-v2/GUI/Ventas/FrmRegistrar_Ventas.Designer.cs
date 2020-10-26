@@ -69,6 +69,7 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVuelto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
@@ -228,7 +229,8 @@
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarCompraToolStripMenuItem,
-            this.consultarComprasToolStripMenuItem});
+            this.consultarComprasToolStripMenuItem,
+            this.nuevoProveedorToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -236,14 +238,14 @@
             // registrarCompraToolStripMenuItem
             // 
             this.registrarCompraToolStripMenuItem.Name = "registrarCompraToolStripMenuItem";
-            this.registrarCompraToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.registrarCompraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrarCompraToolStripMenuItem.Text = "Registrar compra";
             this.registrarCompraToolStripMenuItem.Click += new System.EventHandler(this.registrarCompraToolStripMenuItem_Click);
             // 
             // consultarComprasToolStripMenuItem
             // 
             this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.consultarComprasToolStripMenuItem.Text = "Consultar compras";
             this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
@@ -459,6 +461,13 @@
             this.subtot.ReadOnly = true;
             this.subtot.Width = 125;
             // 
+            // nuevoProveedorToolStripMenuItem
+            // 
+            this.nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
+            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoProveedorToolStripMenuItem.Text = "Nuevo proveedor";
+            this.nuevoProveedorToolStripMenuItem.Click += new System.EventHandler(this.nuevoProveedorToolStripMenuItem_Click);
+            // 
             // FrmRegistrar_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -537,5 +546,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtot;
+        private System.Windows.Forms.ToolStripMenuItem nuevoProveedorToolStripMenuItem;
     }
 }

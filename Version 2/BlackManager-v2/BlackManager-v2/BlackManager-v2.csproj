@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Compras\FrmNuevo_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Compras\FrmNuevo_Proveedor.Designer.cs">
+      <DependentUpon>FrmNuevo_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Compras\FrmRegistrar_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Compras\FrmNuevo_Proveedor.resx">
+      <DependentUpon>FrmNuevo_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Compras\FrmRegistrar_Compra.resx">
       <DependentUpon>FrmRegistrar_Compra.cs</DependentUpon>

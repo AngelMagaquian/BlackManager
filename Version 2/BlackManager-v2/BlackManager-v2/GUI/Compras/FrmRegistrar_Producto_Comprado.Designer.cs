@@ -32,7 +32,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMayor = new System.Windows.Forms.Panel();
             this.lblresultado2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.numPrecioTotal = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numCantCaja = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelUnidad = new System.Windows.Forms.Panel();
             this.lblResultado1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.numPrecioPorUnidad = new System.Windows.Forms.NumericUpDown();
@@ -51,11 +51,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.rdbUnidad = new System.Windows.Forms.RadioButton();
+            this.rdbMayor = new System.Windows.Forms.RadioButton();
+            this.cboProveedores = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.panelMayor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidadesPorCaja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantCaja)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelUnidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioPorUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +76,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(105, 76);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(239, 22);
@@ -79,7 +84,8 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(105, 125);
+            this.txtCodigo.Location = new System.Drawing.Point(105, 126);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(239, 22);
@@ -88,31 +94,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 125);
+            this.label2.Location = new System.Drawing.Point(25, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Codigo:";
             // 
-            // panel1
+            // panelMayor
             // 
-            this.panel1.Controls.Add(this.lblresultado2);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.numPrecioTotal);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.numUnidadesPorCaja);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.numCantCaja);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(446, 212);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 291);
-            this.panel1.TabIndex = 14;
+            this.panelMayor.Controls.Add(this.lblresultado2);
+            this.panelMayor.Controls.Add(this.label10);
+            this.panelMayor.Controls.Add(this.numPrecioTotal);
+            this.panelMayor.Controls.Add(this.label7);
+            this.panelMayor.Controls.Add(this.numUnidadesPorCaja);
+            this.panelMayor.Controls.Add(this.label5);
+            this.panelMayor.Controls.Add(this.numCantCaja);
+            this.panelMayor.Controls.Add(this.label6);
+            this.panelMayor.Location = new System.Drawing.Point(443, 203);
+            this.panelMayor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMayor.Name = "panelMayor";
+            this.panelMayor.Size = new System.Drawing.Size(331, 290);
+            this.panelMayor.TabIndex = 14;
             // 
             // lblresultado2
             // 
             this.lblresultado2.AutoSize = true;
-            this.lblresultado2.Location = new System.Drawing.Point(30, 260);
+            this.lblresultado2.Location = new System.Drawing.Point(29, 260);
             this.lblresultado2.Name = "lblresultado2";
             this.lblresultado2.Size = new System.Drawing.Size(67, 17);
             this.lblresultado2.TabIndex = 20;
@@ -130,7 +137,8 @@
             // numPrecioTotal
             // 
             this.numPrecioTotal.DecimalPlaces = 2;
-            this.numPrecioTotal.Location = new System.Drawing.Point(154, 155);
+            this.numPrecioTotal.Location = new System.Drawing.Point(155, 155);
+            this.numPrecioTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numPrecioTotal.Name = "numPrecioTotal";
             this.numPrecioTotal.Size = new System.Drawing.Size(88, 22);
             this.numPrecioTotal.TabIndex = 18;
@@ -146,7 +154,8 @@
             // 
             // numUnidadesPorCaja
             // 
-            this.numUnidadesPorCaja.Location = new System.Drawing.Point(153, 99);
+            this.numUnidadesPorCaja.Location = new System.Drawing.Point(153, 98);
+            this.numUnidadesPorCaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numUnidadesPorCaja.Name = "numUnidadesPorCaja";
             this.numUnidadesPorCaja.Size = new System.Drawing.Size(88, 22);
             this.numUnidadesPorCaja.TabIndex = 16;
@@ -162,7 +171,8 @@
             // 
             // numCantCaja
             // 
-            this.numCantCaja.Location = new System.Drawing.Point(154, 40);
+            this.numCantCaja.Location = new System.Drawing.Point(155, 39);
+            this.numCantCaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numCantCaja.Name = "numCantCaja";
             this.numCantCaja.Size = new System.Drawing.Size(88, 22);
             this.numCantCaja.TabIndex = 14;
@@ -176,18 +186,19 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Cantidad de cajas:";
             // 
-            // panel2
+            // panelUnidad
             // 
-            this.panel2.Controls.Add(this.lblResultado1);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.numPrecioPorUnidad);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.numUnidades);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(43, 212);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 291);
-            this.panel2.TabIndex = 15;
+            this.panelUnidad.Controls.Add(this.lblResultado1);
+            this.panelUnidad.Controls.Add(this.label11);
+            this.panelUnidad.Controls.Add(this.numPrecioPorUnidad);
+            this.panelUnidad.Controls.Add(this.label4);
+            this.panelUnidad.Controls.Add(this.numUnidades);
+            this.panelUnidad.Controls.Add(this.label3);
+            this.panelUnidad.Location = new System.Drawing.Point(41, 203);
+            this.panelUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelUnidad.Name = "panelUnidad";
+            this.panelUnidad.Size = new System.Drawing.Size(301, 290);
+            this.panelUnidad.TabIndex = 15;
             // 
             // lblResultado1
             // 
@@ -211,6 +222,7 @@
             // 
             this.numPrecioPorUnidad.DecimalPlaces = 2;
             this.numPrecioPorUnidad.Location = new System.Drawing.Point(149, 107);
+            this.numPrecioPorUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numPrecioPorUnidad.Name = "numPrecioPorUnidad";
             this.numPrecioPorUnidad.Size = new System.Drawing.Size(88, 22);
             this.numPrecioPorUnidad.TabIndex = 10;
@@ -227,6 +239,7 @@
             // numUnidades
             // 
             this.numUnidades.Location = new System.Drawing.Point(99, 44);
+            this.numUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numUnidades.Name = "numUnidades";
             this.numUnidades.Size = new System.Drawing.Size(88, 22);
             this.numUnidades.TabIndex = 8;
@@ -243,7 +256,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 192);
+            this.label8.Location = new System.Drawing.Point(39, 183);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 17);
             this.label8.TabIndex = 16;
@@ -252,7 +265,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(443, 193);
+            this.label9.Location = new System.Drawing.Point(441, 184);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 17);
             this.label9.TabIndex = 17;
@@ -260,37 +273,90 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(846, 449);
+            this.btnCargar.Location = new System.Drawing.Point(641, 126);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(119, 54);
+            this.btnCargar.Size = new System.Drawing.Size(119, 38);
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // rdbUnidad
+            // 
+            this.rdbUnidad.AutoSize = true;
+            this.rdbUnidad.Location = new System.Drawing.Point(174, 179);
+            this.rdbUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbUnidad.Name = "rdbUnidad";
+            this.rdbUnidad.Size = new System.Drawing.Size(41, 21);
+            this.rdbUnidad.TabIndex = 19;
+            this.rdbUnidad.TabStop = true;
+            this.rdbUnidad.Text = "Si";
+            this.rdbUnidad.UseVisualStyleBackColor = true;
+            this.rdbUnidad.CheckedChanged += new System.EventHandler(this.rdbUnidad_CheckedChanged);
+            // 
+            // rdbMayor
+            // 
+            this.rdbMayor.AutoSize = true;
+            this.rdbMayor.Location = new System.Drawing.Point(571, 181);
+            this.rdbMayor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdbMayor.Name = "rdbMayor";
+            this.rdbMayor.Size = new System.Drawing.Size(41, 21);
+            this.rdbMayor.TabIndex = 20;
+            this.rdbMayor.TabStop = true;
+            this.rdbMayor.Text = "Si";
+            this.rdbMayor.UseVisualStyleBackColor = true;
+            this.rdbMayor.CheckedChanged += new System.EventHandler(this.rdbMayor_CheckedChanged);
+            // 
+            // cboProveedores
+            // 
+            this.cboProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboProveedores.FormattingEnabled = true;
+            this.cboProveedores.Location = new System.Drawing.Point(573, 76);
+            this.cboProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProveedores.Name = "cboProveedores";
+            this.cboProveedores.Size = new System.Drawing.Size(160, 24);
+            this.cboProveedores.TabIndex = 21;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Location = new System.Drawing.Point(441, 80);
+            this.lblProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(78, 17);
+            this.lblProveedor.TabIndex = 22;
+            this.lblProveedor.Text = "Proveedor:";
             // 
             // FrmRegistrar_Producto_Comprado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 593);
+            this.ClientSize = new System.Drawing.Size(789, 593);
+            this.Controls.Add(this.lblProveedor);
+            this.Controls.Add(this.cboProveedores);
+            this.Controls.Add(this.rdbMayor);
+            this.Controls.Add(this.rdbUnidad);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelUnidad);
+            this.Controls.Add(this.panelMayor);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRegistrar_Producto_Comprado";
             this.Text = "FrmRegistrar_Producto_Comprado";
             this.Load += new System.EventHandler(this.FrmRegistrar_Producto_Comprado_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelMayor.ResumeLayout(false);
+            this.panelMayor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidadesPorCaja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantCaja)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelUnidad.ResumeLayout(false);
+            this.panelUnidad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioPorUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).EndInit();
             this.ResumeLayout(false);
@@ -304,7 +370,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMayor;
         private System.Windows.Forms.Label lblresultado2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numPrecioTotal;
@@ -313,7 +379,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numCantCaja;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelUnidad;
         private System.Windows.Forms.Label lblResultado1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown numPrecioPorUnidad;
@@ -323,5 +389,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.RadioButton rdbUnidad;
+        private System.Windows.Forms.RadioButton rdbMayor;
+        private System.Windows.Forms.ComboBox cboProveedores;
+        private System.Windows.Forms.Label lblProveedor;
     }
 }

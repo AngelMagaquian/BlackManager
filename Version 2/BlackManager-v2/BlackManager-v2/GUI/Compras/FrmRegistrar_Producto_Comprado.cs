@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackManager_v2.Logica_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace BlackManager_v2.GUI.Compras
 
         private void FrmRegistrar_Producto_Comprado_Load(object sender, EventArgs e)
         {
-
+            Reutilizable.LlenarCombo(cboProveedores, Proveedor.ObtenerTodos(), "nombre", "id");
         }
 
         private void Defecto()
@@ -35,6 +36,50 @@ namespace BlackManager_v2.GUI.Compras
 
             lblResultado1.Text = "0.00";
             lblresultado2.Text = "0.00";
+        }
+
+        private void rdbUnidad_CheckedChanged(object sender, EventArgs e)
+        {
+            panelMayor.Enabled = false;
+            panelUnidad.Enabled = true;
+        }
+
+        private void rdbMayor_CheckedChanged(object sender, EventArgs e)
+        {
+            panelUnidad.Enabled = false;
+            panelMayor.Enabled = true;
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            if (rdbMayor.Checked)
+                CompraPorMayor();
+
+        }
+
+        private void CompraPorMayor()
+        {
+            float precioUnitario;
+            int cantidad;
+
+            cantidad = (int)numCantCaja.Value * (int)numUnidadesPorCaja.Value;
+            precioUnitario = (float)numPrecioTotal.Value / (float)cantidad;
+            Compra compraNueva;
+            compraNueva = Compra.Parse(long.Parse(txtCodigo.Text), int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
+
+            compraNueva.RegistrarCompra(compraNueva);
+        }
+        private void CompraPorUnidad()
+        {
+            float precioUnitario;
+            int cantidad;
+
+            cantidad = int.Parse(numUnidades.Value.ToString());
+            precioUnitario = int.Parse(numPrecioPorUnidad.Value.ToString());
+            Compra compraNueva;
+            compraNueva = Compra.Parse(long.Parse(txtCodigo.Text), int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
+
+            compraNueva.RegistrarCompra(compraNueva);
         }
     }
 }

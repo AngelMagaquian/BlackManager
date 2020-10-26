@@ -33,5 +33,17 @@ namespace BlackManager_v2.DAO
             
             return listaProveedores;
         }
+
+        public bool InsertProv(Proveedor prov)
+        {
+            string sql = "INSERT INTO Proveedor ([nombre]) VALUES (@nom)";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("nom", prov.nombre);
+            var rtdo = BDHelper.Instance.EjecutarSQL(sql, parametros);
+            if (rtdo > 0)
+                return true;
+            else
+                return false;
+        }
     }
 }
