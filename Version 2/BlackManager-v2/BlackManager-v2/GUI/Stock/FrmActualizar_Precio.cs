@@ -31,6 +31,7 @@ namespace BlackManager_v2.GUI.Stock
             Defecto();
             Marca all = new Marca();
             Reutilizable.LlenarCombo(cboMarcas, all.ObtenerTodos(), "nombre", "id");
+            Producto.Llenar_grilla(dgvPrecios);
 
         }
 
@@ -42,6 +43,7 @@ namespace BlackManager_v2.GUI.Stock
             Reutilizable.LlenarCombo(cboMarcas, m.ObtenerTodos(), "nombre", "id");
             Producto.Llenar_grilla(dgvPrecios);
             cboMarcas.SelectedIndex = 0;
+            id_prod = 0;
 
         }
 
@@ -53,13 +55,33 @@ namespace BlackManager_v2.GUI.Stock
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[0].Value.ToString());
             FrmActualizar_Precio_Nuevo ventana = new FrmActualizar_Precio_Nuevo(id_prod);
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+        }
+
+        private void btrAct_Rapida_Click(object sender, EventArgs e)
+        {
+            id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[0].Value.ToString());
+            double nuevoPrecio = double.Parse(dgvPrecios.SelectedRows[0].Cells["precio"].Value.ToString());
+            nuevoPrecio = nuevoPrecio * (1 + (double)numPorcentaje.Value / 100);
+            try
+            {
+                new Producto().ActualizarPrecio(id_prod, nuevoPrecio);
+                MessageBox.Show("Precio actualizado con exito", "Actualizacion rapida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la actualizacion rapida " + ex.Message, "Actualizacion rapida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            Defecto();
         }
 
         private void registrarVentaToolStripMenuItem_Click(object sender, EventArgs e)

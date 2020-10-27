@@ -35,31 +35,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dgvPrecios = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPorcentaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).BeginInit();
             this.SuspendLayout();
             // 
             // btrAct_Rapida
             // 
-            this.btrAct_Rapida.Location = new System.Drawing.Point(874, 431);
+            this.btrAct_Rapida.Location = new System.Drawing.Point(874, 439);
             this.btrAct_Rapida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btrAct_Rapida.Name = "btrAct_Rapida";
-            this.btrAct_Rapida.Size = new System.Drawing.Size(131, 59);
+            this.btrAct_Rapida.Size = new System.Drawing.Size(115, 42);
             this.btrAct_Rapida.TabIndex = 37;
             this.btrAct_Rapida.Text = "Actualización Rápida";
             this.btrAct_Rapida.UseVisualStyleBackColor = true;
+            this.btrAct_Rapida.Click += new System.EventHandler(this.btrAct_Rapida_Click);
             // 
             // numPorcentaje
             // 
-            this.numPorcentaje.Location = new System.Drawing.Point(722, 450);
+            this.numPorcentaje.Location = new System.Drawing.Point(722, 449);
             this.numPorcentaje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numPorcentaje.Name = "numPorcentaje";
-            this.numPorcentaje.Size = new System.Drawing.Size(113, 22);
+            this.numPorcentaje.Size = new System.Drawing.Size(115, 22);
             this.numPorcentaje.TabIndex = 36;
             // 
             // label2
@@ -107,10 +105,6 @@
             this.dgvPrecios.AllowUserToAddRows = false;
             this.dgvPrecios.AllowUserToDeleteRows = false;
             this.dgvPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrecios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nombre,
-            this.precio});
             this.dgvPrecios.Location = new System.Drawing.Point(12, 109);
             this.dgvPrecios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPrecios.Name = "dgvPrecios";
@@ -119,30 +113,6 @@
             this.dgvPrecios.RowTemplate.Height = 24;
             this.dgvPrecios.Size = new System.Drawing.Size(693, 510);
             this.dgvPrecios.TabIndex = 31;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Codigo";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Producto";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 125;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 125;
             // 
             // btnFiltrar
             // 
@@ -155,23 +125,23 @@
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Location = new System.Drawing.Point(874, 241);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 42);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEditar.Location = new System.Drawing.Point(874, 241);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(115, 42);
+            this.btnEditar.TabIndex = 38;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // FrmActualizar_Precio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 648);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1057, 634);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btrAct_Rapida);
             this.Controls.Add(this.numPorcentaje);
             this.Controls.Add(this.label2);
@@ -199,9 +169,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridView dgvPrecios;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
