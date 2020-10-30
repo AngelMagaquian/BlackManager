@@ -55,6 +55,7 @@
             this.rdbMayor = new System.Windows.Forms.RadioButton();
             this.cboProveedores = new System.Windows.Forms.ComboBox();
             this.lblProveedor = new System.Windows.Forms.Label();
+            this.btnNuevoProv = new System.Windows.Forms.Button();
             this.panelMayor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidadesPorCaja)).BeginInit();
@@ -273,7 +274,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(641, 126);
+            this.btnCargar.Location = new System.Drawing.Point(337, 497);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(119, 38);
@@ -313,7 +314,7 @@
             this.cboProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboProveedores.FormattingEnabled = true;
             this.cboProveedores.Location = new System.Drawing.Point(573, 76);
-            this.cboProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.cboProveedores.Name = "cboProveedores";
             this.cboProveedores.Size = new System.Drawing.Size(160, 24);
             this.cboProveedores.TabIndex = 21;
@@ -328,11 +329,22 @@
             this.lblProveedor.TabIndex = 22;
             this.lblProveedor.Text = "Proveedor:";
             // 
+            // btnNuevoProv
+            // 
+            this.btnNuevoProv.Location = new System.Drawing.Point(437, 126);
+            this.btnNuevoProv.Name = "btnNuevoProv";
+            this.btnNuevoProv.Size = new System.Drawing.Size(129, 38);
+            this.btnNuevoProv.TabIndex = 23;
+            this.btnNuevoProv.Text = "Nuevo Proveedor";
+            this.btnNuevoProv.UseVisualStyleBackColor = true;
+            this.btnNuevoProv.Click += new System.EventHandler(this.btnNuevoProv_Click);
+            // 
             // FrmRegistrar_Producto_Comprado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 593);
+            this.Controls.Add(this.btnNuevoProv);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.cboProveedores);
             this.Controls.Add(this.rdbMayor);
@@ -393,5 +405,6 @@
         private System.Windows.Forms.RadioButton rdbMayor;
         private System.Windows.Forms.ComboBox cboProveedores;
         private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.Button btnNuevoProv;
     }
 }

@@ -54,6 +54,9 @@ namespace BlackManager_v2.GUI.Compras
         {
             if (rdbMayor.Checked)
                 CompraPorMayor();
+            else
+                if (rdbUnidad.Checked)
+                CompraPorUnidad();
 
         }
 
@@ -80,6 +83,14 @@ namespace BlackManager_v2.GUI.Compras
             compraNueva = Compra.Parse(long.Parse(txtCodigo.Text), int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
 
             compraNueva.RegistrarCompra(compraNueva);
+        }
+
+        private void btnNuevoProv_Click(object sender, EventArgs e)
+        {
+            FrmNuevo_Proveedor ventana = new FrmNuevo_Proveedor();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
         }
     }
 }

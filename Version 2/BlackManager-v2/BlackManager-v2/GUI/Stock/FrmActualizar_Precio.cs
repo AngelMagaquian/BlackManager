@@ -66,18 +66,24 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btrAct_Rapida_Click(object sender, EventArgs e)
         {
-            id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[0].Value.ToString());
+            /*id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[0].Value.ToString());
             double nuevoPrecio = double.Parse(dgvPrecios.SelectedRows[0].Cells["precio"].Value.ToString());
-            nuevoPrecio = nuevoPrecio * (1 + (double)numPorcentaje.Value / 100);
+            nuevoPrecio = nuevoPrecio * (1 + (double)numPorcentaje.Value / 100);*/
             try
             {
+                id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells["Id"].Value.ToString());
+                double nuevoPrecio = double.Parse(dgvPrecios.SelectedRows[0].Cells["precio"].Value.ToString());
+                nuevoPrecio = nuevoPrecio * (1 + (double)numPorcentaje.Value / 100);
                 new Producto().ActualizarPrecio(id_prod, nuevoPrecio);
                 MessageBox.Show("Precio actualizado con exito", "Actualizacion rapida", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en la actualizacion rapida " + ex.Message, "Actualizacion rapida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dgvPrecios.SelectedRows.Count != 1)
+                    MessageBox.Show("Debe seleccionar una sola fila, no muchas filas ni una celda", "Error de usuario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("Error en la actualizacion rapida " + ex.Message, "Actualizacion rapida", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 

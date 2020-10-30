@@ -17,6 +17,7 @@ namespace BlackManager_v2.GUI.Ventas
 {
     public partial class FrmRegistrar_Ventas : Form
     {
+        Producto prod;
         public FrmRegistrar_Ventas()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace BlackManager_v2.GUI.Ventas
         {
             try //Busca el producto en la bd y si lo encuentra lo añade a la grilla, sino muestra mensaje de error.
             {
-                Producto prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
+                prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
                 AgregarProductoAGrilla(prod);
             }
             catch(Exception ex)
@@ -46,12 +47,10 @@ namespace BlackManager_v2.GUI.Ventas
             if (row == -1)
             {
                 dgvResumen.Rows.Add(p.Id, p.nombre, p.nom_marca, 1, p.precio, p.precio);
-                p.cantidad -= 1;
             }
             else
             {
                 int actual = int.Parse(dgvResumen.Rows[row].Cells["cantidad"].Value.ToString());
-                p.cantidad -= 1;
                 actual += 1;
                 dgvResumen.Rows[row].Cells["cantidad"].Value = actual;
                 double subtotal = (double)p.cantidad * p.precio;
@@ -64,7 +63,8 @@ namespace BlackManager_v2.GUI.Ventas
         {
             for (int i=0; i < dgvResumen.Rows.Count; i++)
             {
-                if (id_prod - long.Parse(dgvResumen.Rows[i].Cells["id_prod"].Value.ToString()) == 0)
+                long id_enGrilla = long.Parse(dgvResumen.Rows[i].Cells["cod_prod"].Value.ToString());
+                if (id_prod - id_enGrilla == 0)
                     return i;
             }
             return -1;
