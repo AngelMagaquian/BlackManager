@@ -13,16 +13,26 @@ namespace BlackManager_v2.GUI.Compras
 {
     public partial class FrmRegistrar_Producto_Comprado : Form
     {
-        public FrmRegistrar_Producto_Comprado()
+        long myId;
+        Producto producto;
+        public FrmRegistrar_Producto_Comprado(long id)
         {
             InitializeComponent();
+            myId = id;
         }
 
         private void FrmRegistrar_Producto_Comprado_Load(object sender, EventArgs e)
         {
             Reutilizable.LlenarCombo(cboProveedores, Proveedor.ObtenerTodos(), "nombre", "id");
+            producto = Producto.ObtenerPorID(myId);
+            CargarProd();
         }
 
+        private void CargarProd()
+        {
+            txtCodigo.Text = producto.Id.ToString();
+            txtNombre.Text = producto.nombre;
+        }
         private void Defecto()
         {
             txtCodigo.Clear();
@@ -68,7 +78,7 @@ namespace BlackManager_v2.GUI.Compras
             cantidad = (int)numCantCaja.Value * (int)numUnidadesPorCaja.Value;
             precioUnitario = (float)numPrecioTotal.Value / (float)cantidad;
             Compra compraNueva;
-            compraNueva = Compra.Parse(long.Parse(txtCodigo.Text), int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
+            compraNueva = Compra.Parse(producto.Id, int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
 
             compraNueva.RegistrarCompra(compraNueva);
         }

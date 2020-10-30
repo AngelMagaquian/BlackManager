@@ -116,5 +116,14 @@ namespace BlackManager_v2.GUI.Stock
             Producto.Llenar_Grilla_Marca(dgvResumen, int.Parse(cboMarcas.SelectedValue.ToString()));
             dgvResumen.Refresh();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            long id_prod = long.Parse(dgvResumen.SelectedRows[0].Cells["Id"].Value.ToString());
+            FrmRegistrar_Producto_Comprado ventana = new FrmRegistrar_Producto_Comprado(id_prod);
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
+        }
     }
 }

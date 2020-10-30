@@ -29,15 +29,20 @@ namespace BlackManager_v2.GUI.Ventas
         }
         private void txtCodigo_Producto_TextChanged(object sender, EventArgs e)
         {
-            try //Busca el producto en la bd y si lo encuentra lo añade a la grilla, sino muestra mensaje de error.
+            if (String.IsNullOrEmpty(txtCodigo_Producto.Text))
+                prod = null;
+            else
             {
-                prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
-                AgregarProductoAGrilla(prod);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("El codigo del producto no existe en la base de datos", 
-                    "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try //Busca el producto en la bd y si lo encuentra lo añade a la grilla, sino muestra mensaje de error.
+                {
+                    prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
+                    AgregarProductoAGrilla(prod);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El codigo del producto no existe en la base de datos",
+                        "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         
@@ -56,6 +61,7 @@ namespace BlackManager_v2.GUI.Ventas
                 double subtotal = (double)p.cantidad * p.precio;
                 dgvResumen.Rows[row].Cells["subtot"].Value = subtotal;
             }
+            prod = null;
             
         }
 

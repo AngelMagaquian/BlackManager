@@ -32,5 +32,20 @@ namespace BlackManager_v2.DAO
 
             return listaMarcas;
         }
+
+        public bool InsertMarca(string nombre)
+        {
+            string sql = "INSERT INTO Marca ([nombre]) VALUES (@nom)";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("nom", nombre);
+            BDHelper.Instance.ConectarTransaccion();
+            var rtdo = BDHelper.Instance.EjecutarSQL(sql, parametros);
+            BDHelper.Instance.Desconectar();
+            if (rtdo > 0)
+                return true;
+            else
+                return false;
+        }
+    
     }
 }

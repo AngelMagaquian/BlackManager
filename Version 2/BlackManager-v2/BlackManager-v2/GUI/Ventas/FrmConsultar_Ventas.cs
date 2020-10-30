@@ -102,5 +102,6 @@ namespace BlackManager_v2.GUI.Ventas
             ventana.ShowDialog();
             this.Show();
         }
+
     }
 }

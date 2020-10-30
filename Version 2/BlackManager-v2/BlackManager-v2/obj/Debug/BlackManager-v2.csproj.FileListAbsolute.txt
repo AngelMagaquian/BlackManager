@@ -125,3 +125,4 @@ C:\Users\angel\Desktop\BlackManager-BlackManagerV2\Version 2\BlackManager-v2\Bla
 C:\Users\angel\Desktop\BlackManager-BlackManagerV2\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csproj.CoreCompileInputs.cache
 C:\Users\angel\Desktop\BlackManager-BlackManagerV2\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.exe
 C:\Users\angel\Desktop\BlackManager-BlackManagerV2\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.pdb
+D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csprojAssemblyReference.cache

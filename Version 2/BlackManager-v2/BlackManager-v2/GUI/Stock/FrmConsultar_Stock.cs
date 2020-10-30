@@ -24,7 +24,6 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            dgvResumen.Rows.Clear();
             Producto.Llenar_Grilla_Marca(dgvResumen, int.Parse(cboMarcas.SelectedValue.ToString()));
             dgvResumen.Refresh();
         }
@@ -37,7 +36,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void Defecto()
         {
-            dgvResumen.Rows.Clear();
+            dgvResumen.Refresh();
             
             Marca m = new Marca();
             Reutilizable.LlenarCombo(cboMarcas, m.ObtenerTodos(), "nombre", "id");
@@ -123,6 +122,11 @@ namespace BlackManager_v2.GUI.Stock
             Marca m = new Marca();
             Reutilizable.LlenarCombo(cboMarcas, m.ObtenerTodos(), "nombre", "id");
             cboMarcas.SelectedIndex = 0;
+        }
+
+        private void btnStock_Completo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

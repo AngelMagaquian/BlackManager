@@ -40,6 +40,7 @@ namespace BlackManager_v2.GUI.Gastos
         {
             Gasto save = Gasto.Parse(txtDescripcion.Text, double.Parse(numMonto.Value.ToString()), txtProducto.Text);
             save.AgregarGasto(save);
+            MessageBox.Show("Gasto registrado con exito", "Gasto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

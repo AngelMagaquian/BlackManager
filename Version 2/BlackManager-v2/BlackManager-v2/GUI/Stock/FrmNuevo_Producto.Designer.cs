@@ -135,6 +135,7 @@
             this.btnNueva_Marca.TabIndex = 50;
             this.btnNueva_Marca.Text = "Nueva Marca";
             this.btnNueva_Marca.UseVisualStyleBackColor = true;
+            this.btnNueva_Marca.Click += new System.EventHandler(this.btnNueva_Marca_Click);
             // 
             // txtTipo
             // 

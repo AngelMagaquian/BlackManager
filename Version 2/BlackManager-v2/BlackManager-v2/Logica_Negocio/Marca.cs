@@ -39,6 +39,10 @@ namespace BlackManager_v2.Logica_Negocio
         {
             return nombre;
         }
+        public bool RegistrarNuevaMarca(string marca)
+        {
+            return oMarca.InsertMarca(marca);
+        }
 
     }
 }

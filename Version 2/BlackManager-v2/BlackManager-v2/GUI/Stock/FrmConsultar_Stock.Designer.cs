@@ -34,8 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dgvResumen = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +46,7 @@
             this.btnStock_Completo.TabIndex = 34;
             this.btnStock_Completo.Text = "Ver Stock Completo";
             this.btnStock_Completo.UseVisualStyleBackColor = true;
+            this.btnStock_Completo.Click += new System.EventHandler(this.btnStock_Completo_Click);
             // 
             // cboMarcas
             // 
@@ -95,9 +94,6 @@
             this.dgvResumen.AllowUserToAddRows = false;
             this.dgvResumen.AllowUserToDeleteRows = false;
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nombre});
             this.dgvResumen.Location = new System.Drawing.Point(12, 43);
             this.dgvResumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvResumen.Name = "dgvResumen";
@@ -106,22 +102,6 @@
             this.dgvResumen.RowTemplate.Height = 24;
             this.dgvResumen.Size = new System.Drawing.Size(693, 430);
             this.dgvResumen.TabIndex = 29;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Codigo";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Producto";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 125;
             // 
             // FrmConsultar_Stock
             // 
@@ -152,7 +132,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridView dgvResumen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
     }
 }

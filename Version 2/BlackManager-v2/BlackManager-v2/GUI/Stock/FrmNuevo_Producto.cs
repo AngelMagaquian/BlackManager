@@ -129,5 +129,10 @@ namespace BlackManager_v2.GUI.Stock
         {
 
         }
+
+        private void btnNueva_Marca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
