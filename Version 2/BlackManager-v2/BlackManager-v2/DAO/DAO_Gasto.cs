@@ -45,7 +45,9 @@ namespace BlackManager_v2.DAO
             parametros.Add("descr", guardar.descripcion);
             parametros.Add("monto", guardar.monto);
             parametros.Add("prod", guardar.producto);
+            BDHelper.Instance.ConectarTransaccion();
             var rtdo = BDHelper.Instance.EjecutarSQL(sql, parametros);
+            BDHelper.Instance.Desconectar();
             if (rtdo > 0)
                 return true;
             else

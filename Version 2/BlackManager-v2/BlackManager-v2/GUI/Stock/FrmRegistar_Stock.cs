@@ -112,7 +112,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvResumen.Rows.Clear();
+            //dgvResumen.Rows.Clear();
             Producto.Llenar_Grilla_Marca(dgvResumen, int.Parse(cboMarcas.SelectedValue.ToString()));
             dgvResumen.Refresh();
         }

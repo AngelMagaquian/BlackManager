@@ -43,7 +43,7 @@ namespace BlackManager_v2.GUI.Ventas
         private void AgregarProductoAGrilla(Producto p)
         {
             int row = ExisteProd(p.Id);
-            if (row != -1)
+            if (row == -1)
             {
                 dgvResumen.Rows.Add(p.Id, p.nombre, p.nom_marca, 1, p.precio, p.precio);
                 p.cantidad -= 1;

@@ -31,7 +31,7 @@ namespace BlackManager_v2.DAO
         {
             List<Producto> listaProductos = new List<Producto>();
             string sql = "SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
-                        "FROM Producto p INNER JOIN Marca m (p.id_marca=m.id_marca) " +
+                        "FROM Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca) " +
                         "WHERE m.id_marca = @marca";
             var parametros = new Dictionary<string, object>();
             parametros.Add("marca", marca);
@@ -97,9 +97,11 @@ namespace BlackManager_v2.DAO
             try
             {
                 Producto nuevo;
-                string sql = "SELECT * FROM PRODUCTO p WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
+                string sql = "SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
+                             "FROM Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca) " +
+                             "WHERE p.id_producto = @id"; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
                 var parametros = new Dictionary<string, object>();
-                parametros.Add("id_producto", id);
+                parametros.Add("id", id);
 
                 var tablaProd = BDHelper.Instance.ConsultarSQL(sql, parametros);
                 nuevo = Mappeo(tablaProd.Rows[0]);

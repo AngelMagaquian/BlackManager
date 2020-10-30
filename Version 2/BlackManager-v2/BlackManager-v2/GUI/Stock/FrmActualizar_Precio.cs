@@ -49,7 +49,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            dgvPrecios.Rows.Clear();
+            //dgvPrecios.Rows.Clear();
             Producto.Llenar_Grilla_Marca(dgvPrecios, int.Parse(cboMarcas.SelectedValue.ToString()));
             dgvPrecios.Refresh();
 
@@ -57,7 +57,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[0].Value.ToString());
+            id_prod = long.Parse(dgvPrecios.SelectedRows[0].Cells[6].Value.ToString());
             FrmActualizar_Precio_Nuevo ventana = new FrmActualizar_Precio_Nuevo(id_prod);
             this.Hide();
             ventana.ShowDialog();
