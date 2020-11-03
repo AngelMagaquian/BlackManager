@@ -15,7 +15,7 @@ namespace BlackManager_v2.Logica_Negocio
         public int id_prov { get; set; }
         public string nom_prov { get; set; }
         public DateTime fecha { get; set; }
-        public float precioUnitario { get; set; }
+        public double precioUnitario { get; set; }
         public int cantidad { get; set; }
         public int Id { get => id; set => id = value; }
 
@@ -26,7 +26,7 @@ namespace BlackManager_v2.Logica_Negocio
             oCompra.InsertCompra(comp);
         }
 
-        public static Compra Parse(long idprod, /*string nomprod,*/ int idprov,/*string nomprov,*/ float precioU, int cant)
+        public static Compra Parse(long idprod, /*string nomprod,*/ int idprov,/*string nomprov,*/ double precioU, int cant)
         {
             Compra nuevo = new Compra();
             nuevo.id_prod = idprod;
@@ -35,7 +35,7 @@ namespace BlackManager_v2.Logica_Negocio
             //nuevo.nom_prov = nomprov;
             nuevo.precioUnitario = precioU;
             nuevo.cantidad = cant;
-            nuevo.fecha = DateTime.Now;
+            nuevo.fecha = DateTime.Now.Date;
 
             return nuevo;
         }

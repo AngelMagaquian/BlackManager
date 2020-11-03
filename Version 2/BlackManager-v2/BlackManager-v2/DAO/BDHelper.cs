@@ -163,7 +163,7 @@ namespace BlackManager_v2.DAO
         }
 
         //Este tipo de consulta la utilizamos para seguir la transaccion y obtener el ultima ID
-        public object ConsultaSQLScalar(string strSql)
+        public Object ConsultaSQLScalar(string strSql)
         {
             try
             {

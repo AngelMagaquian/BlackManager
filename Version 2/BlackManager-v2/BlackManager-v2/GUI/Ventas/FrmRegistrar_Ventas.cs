@@ -22,7 +22,7 @@ namespace BlackManager_v2.GUI.Ventas
         {
             InitializeComponent();
         }
-
+        //hacer aca la global
         private void FrmRegistrar_Ventas_Load(object sender, EventArgs e)
         {
             defecto();
@@ -58,7 +58,7 @@ namespace BlackManager_v2.GUI.Ventas
                 int actual = int.Parse(dgvResumen.Rows[row].Cells["cantidad"].Value.ToString());
                 actual += 1;
                 dgvResumen.Rows[row].Cells["cantidad"].Value = actual;
-                double subtotal = (double)p.cantidad * p.precio;
+                double subtotal = (double)actual * p.precio;
                 dgvResumen.Rows[row].Cells["subtot"].Value = subtotal;
             }
             prod = null;
@@ -86,6 +86,8 @@ namespace BlackManager_v2.GUI.Ventas
             double total = double.Parse(lblTotal.Text);
 
             Venta.AgregarVenta(mp, total, detalles);
+            defecto();
+            MessageBox.Show("Venta registrada con exito", "Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void defecto()
@@ -104,6 +106,7 @@ namespace BlackManager_v2.GUI.Ventas
             lblVuelto.Text = "0.00";
             //poner el valor por defecto de num
             numVuelto.Value = 0;
+            prod = null;
         }
 
 

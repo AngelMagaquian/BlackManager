@@ -344,7 +344,6 @@
             this.txtCodigo_Producto.Name = "txtCodigo_Producto";
             this.txtCodigo_Producto.Size = new System.Drawing.Size(227, 22);
             this.txtCodigo_Producto.TabIndex = 1;
-            this.txtCodigo_Producto.UseWaitCursor = true;
             this.txtCodigo_Producto.TextChanged += new System.EventHandler(this.txtCodigo_Producto_TextChanged);
             // 
             // label3

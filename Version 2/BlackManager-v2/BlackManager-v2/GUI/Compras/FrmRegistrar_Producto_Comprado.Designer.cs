@@ -140,6 +140,11 @@
             this.numPrecioTotal.DecimalPlaces = 2;
             this.numPrecioTotal.Location = new System.Drawing.Point(155, 155);
             this.numPrecioTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numPrecioTotal.Maximum = new decimal(new int[] {
+            -402653185,
+            -1613725636,
+            54210108,
+            0});
             this.numPrecioTotal.Name = "numPrecioTotal";
             this.numPrecioTotal.Size = new System.Drawing.Size(88, 22);
             this.numPrecioTotal.TabIndex = 18;
@@ -157,6 +162,11 @@
             // 
             this.numUnidadesPorCaja.Location = new System.Drawing.Point(153, 98);
             this.numUnidadesPorCaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numUnidadesPorCaja.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
             this.numUnidadesPorCaja.Name = "numUnidadesPorCaja";
             this.numUnidadesPorCaja.Size = new System.Drawing.Size(88, 22);
             this.numUnidadesPorCaja.TabIndex = 16;
@@ -174,6 +184,11 @@
             // 
             this.numCantCaja.Location = new System.Drawing.Point(155, 39);
             this.numCantCaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numCantCaja.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
             this.numCantCaja.Name = "numCantCaja";
             this.numCantCaja.Size = new System.Drawing.Size(88, 22);
             this.numCantCaja.TabIndex = 14;
@@ -224,6 +239,11 @@
             this.numPrecioPorUnidad.DecimalPlaces = 2;
             this.numPrecioPorUnidad.Location = new System.Drawing.Point(149, 107);
             this.numPrecioPorUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numPrecioPorUnidad.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
             this.numPrecioPorUnidad.Name = "numPrecioPorUnidad";
             this.numPrecioPorUnidad.Size = new System.Drawing.Size(88, 22);
             this.numPrecioPorUnidad.TabIndex = 10;
@@ -241,6 +261,11 @@
             // 
             this.numUnidades.Location = new System.Drawing.Point(99, 44);
             this.numUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numUnidades.Maximum = new decimal(new int[] {
+            1241513983,
+            370409800,
+            542101,
+            0});
             this.numUnidades.Name = "numUnidades";
             this.numUnidades.Size = new System.Drawing.Size(88, 22);
             this.numUnidades.TabIndex = 8;

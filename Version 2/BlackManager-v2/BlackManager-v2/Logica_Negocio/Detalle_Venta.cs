@@ -33,9 +33,9 @@ namespace BlackManager_v2.Logica_Negocio
         {
             Detalle_Venta nuevoDetalle = new Detalle_Venta();
 
-            nuevoDetalle.id_producto = long.Parse(data.Cells["Id"].ToString());
-            nuevoDetalle.cantidad = int.Parse(data.Cells["cantidad"].ToString());
-            nuevoDetalle.subtotal = double.Parse(data.Cells["subtot"].ToString());
+            nuevoDetalle.id_producto = long.Parse(data.Cells["cod_prod"].Value.ToString());
+            nuevoDetalle.cantidad = int.Parse(data.Cells["cantidad"].Value.ToString());
+            nuevoDetalle.subtotal = double.Parse(data.Cells["subtot"].Value.ToString());
             return nuevoDetalle;
         }
     }

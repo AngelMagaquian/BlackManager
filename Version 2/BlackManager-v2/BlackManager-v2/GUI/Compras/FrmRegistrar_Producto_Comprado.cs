@@ -24,6 +24,7 @@ namespace BlackManager_v2.GUI.Compras
         private void FrmRegistrar_Producto_Comprado_Load(object sender, EventArgs e)
         {
             Reutilizable.LlenarCombo(cboProveedores, Proveedor.ObtenerTodos(), "nombre", "id");
+            cboProveedores.SelectedIndex = 0;
             producto = Producto.ObtenerPorID(myId);
             CargarProd();
         }
@@ -84,11 +85,11 @@ namespace BlackManager_v2.GUI.Compras
         }
         private void CompraPorUnidad()
         {
-            float precioUnitario;
+            double precioUnitario;
             int cantidad;
 
             cantidad = int.Parse(numUnidades.Value.ToString());
-            precioUnitario = int.Parse(numPrecioPorUnidad.Value.ToString());
+            precioUnitario = double.Parse(numPrecioPorUnidad.Value.ToString());
             Compra compraNueva;
             compraNueva = Compra.Parse(long.Parse(txtCodigo.Text), int.Parse(cboProveedores.SelectedValue.ToString()), precioUnitario, cantidad);
 
@@ -101,6 +102,7 @@ namespace BlackManager_v2.GUI.Compras
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+            cboProveedores.Refresh();
         }
     }
 }

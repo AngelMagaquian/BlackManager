@@ -115,6 +115,28 @@ namespace BlackManager_v2.DAO
             
         }
 
+        internal int GetByIDEscalar(long id)
+        {
+            try
+            {
+                string sql = "SELECT p.cantidad " +
+                             "FROM Producto p " +
+                             "WHERE p.id_producto = " + id.ToString() ; //creo q aca habia q pegar SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " + "FROM Producto p
+                var parametros = new Dictionary<string, object>();
+                var tablaProd = BDHelper.Instance.ConsultaSQLScalar(sql);
+                int nuevo = int.Parse(tablaProd.ToString());
+                return nuevo;
+
+            }
+            catch
+            {
+                return 0;
+            }
+
+        }
+
+
+
         /*internal void ActualizarPrecio(long id_producto, double precio)
         {
             string sql = string.Concat("Insert INTO Producto",
@@ -156,8 +178,8 @@ namespace BlackManager_v2.DAO
             string sql = string.Concat("UPDATE Producto p SET p.cantidad = @cantidad " +
                                         "WHERE p.id_producto = @id_prodcuto");
 
-            Producto p = new DAO_Producto().GetByID(id_producto);
-            int cantidad = p.cantidad + nuevaCantidad;
+            int cant_Prod = new DAO_Producto().GetByIDEscalar(id_producto);
+            int cantidad = cant_Prod + nuevaCantidad;
             var parametros = new Dictionary<string, object>();
             parametros.Add("precio", cantidad);
             parametros.Add("id_producto", id_producto);
