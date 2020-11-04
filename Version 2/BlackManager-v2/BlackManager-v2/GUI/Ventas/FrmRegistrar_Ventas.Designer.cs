@@ -369,6 +369,7 @@
             this.numVuelto.Name = "numVuelto";
             this.numVuelto.Size = new System.Drawing.Size(120, 22);
             this.numVuelto.TabIndex = 8;
+            this.numVuelto.ValueChanged += new System.EventHandler(this.numVuelto_ValueChanged);
             // 
             // lblPagacon1
             // 

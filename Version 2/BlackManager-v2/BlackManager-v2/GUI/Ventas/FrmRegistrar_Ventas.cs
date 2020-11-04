@@ -12,6 +12,7 @@ using BlackManager_v2.GUI.Stock;
 using BlackManager_v2.GUI.Gastos;
 using BlackManager_v2.Logica_Negocio;
 using BlackManager_v2.GUI.Compras;
+using System.Drawing.Imaging;
 
 namespace BlackManager_v2.GUI.Ventas
 {
@@ -23,6 +24,7 @@ namespace BlackManager_v2.GUI.Ventas
             InitializeComponent();
         }
         //hacer aca la global
+        public static double total = 0.00;
         private void FrmRegistrar_Ventas_Load(object sender, EventArgs e)
         {
             defecto();
@@ -52,6 +54,10 @@ namespace BlackManager_v2.GUI.Ventas
             if (row == -1)
             {
                 dgvResumen.Rows.Add(p.Id, p.nombre, p.nom_marca, 1, p.precio, p.precio);
+                total += p.precio;
+                lblTotal.Text = total.ToString();
+                txtCodigo_Producto.Text = "";
+                txtCodigo_Producto.Focus();
             }
             else
             {
@@ -60,8 +66,13 @@ namespace BlackManager_v2.GUI.Ventas
                 dgvResumen.Rows[row].Cells["cantidad"].Value = actual;
                 double subtotal = (double)actual * p.precio;
                 dgvResumen.Rows[row].Cells["subtot"].Value = subtotal;
+                total += subtotal;
+                lblTotal.Text= total.ToString();
+                txtCodigo_Producto.Text="";
+                txtCodigo_Producto.Focus();
             }
-            prod = null;
+         
+           prod = null;
             
         }
 
@@ -202,6 +213,13 @@ namespace BlackManager_v2.GUI.Ventas
         private void button1_Click(object sender, EventArgs e)
         {
             defecto();
+        }
+
+        private void numVuelto_ValueChanged(object sender, EventArgs e)
+        {
+            double vuelto = decimal.ToDouble(numVuelto.Value);
+            vuelto = vuelto-total;
+            lblVuelto.Text = vuelto.ToString();
         }
     }
 }
