@@ -82,10 +82,16 @@
     <Compile Include="GUI\Compras\FrmRegistrar_Producto_Comprado.Designer.cs">
       <DependentUpon>FrmRegistrar_Producto_Comprado.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Gastos\FrmConsultar_Gasto.cs">
+    <Compile Include="Reportes\FrmConsultar_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Gastos\FrmConsultar_Gasto.Designer.cs">
+    <Compile Include="Reportes\FrmConsultar_Compra.Designer.cs">
+      <DependentUpon>FrmConsultar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmConsultar_Gasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmConsultar_Gasto.Designer.cs">
       <DependentUpon>FrmConsultar_Gasto.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Gastos\FrmRegistrar_Gasato.cs">
@@ -125,10 +131,10 @@
     <Compile Include="GUI\Stock\FrmRegistar_Stock.Designer.cs">
       <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Ventas\FrmConsultar_Ventas.cs">
+    <Compile Include="Reportes\FrmConsultar_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Ventas\FrmConsultar_Ventas.Designer.cs">
+    <Compile Include="Reportes\FrmConsultar_Ventas.Designer.cs">
       <DependentUpon>FrmConsultar_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Ventas\FrmRegistrar_Ventas.cs">
@@ -159,7 +165,10 @@
     <EmbeddedResource Include="GUI\Compras\FrmRegistrar_Producto_Comprado.resx">
       <DependentUpon>FrmRegistrar_Producto_Comprado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Gastos\FrmConsultar_Gasto.resx">
+    <EmbeddedResource Include="Reportes\FrmConsultar_Compra.resx">
+      <DependentUpon>FrmConsultar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmConsultar_Gasto.resx">
       <DependentUpon>FrmConsultar_Gasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Gastos\FrmRegistrar_Gasato.resx">
@@ -180,7 +189,7 @@
     <EmbeddedResource Include="GUI\Stock\FrmRegistar_Stock.resx">
       <DependentUpon>FrmRegistar_Stock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Ventas\FrmConsultar_Ventas.resx">
+    <EmbeddedResource Include="Reportes\FrmConsultar_Ventas.resx">
       <DependentUpon>FrmConsultar_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Ventas\FrmRegistrar_Ventas.resx">

@@ -148,3 +148,4 @@ C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.csproj.CoreCompileInputs.cache
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.exe
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager-v2.pdb
+C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Reportes.FrmConsultar_Compra.resources

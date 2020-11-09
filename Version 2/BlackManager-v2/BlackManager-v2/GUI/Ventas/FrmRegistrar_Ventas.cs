@@ -12,6 +12,7 @@ using BlackManager_v2.GUI.Stock;
 using BlackManager_v2.GUI.Gastos;
 using BlackManager_v2.Logica_Negocio;
 using BlackManager_v2.GUI.Compras;
+using BlackManager_v2.Reportes;
 using System.Drawing.Imaging;
 
 namespace BlackManager_v2.GUI.Ventas
@@ -196,10 +197,10 @@ namespace BlackManager_v2.GUI.Ventas
 
         private void consultarComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* FrmRegistrar_Compra ventana = new FrmRegistrar_Compra();
+            FrmConsultar_Compra ventana = new FrmConsultar_Compra();
             this.Hide();
             ventana.ShowDialog();
-            this.Show();*/
+            this.Show();
         }
 
         private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
