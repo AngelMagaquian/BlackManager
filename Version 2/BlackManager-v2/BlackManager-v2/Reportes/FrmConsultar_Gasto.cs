@@ -11,6 +11,7 @@ namespace BlackManager_v2.GUI.Gastos
 {
     public partial class FrmConsultar_Gasto : Form
     {
+        public static double total = 0.00;
         public FrmConsultar_Gasto()
         {
             InitializeComponent();
@@ -30,16 +31,27 @@ namespace BlackManager_v2.GUI.Gastos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Gasto gastos = new Gasto();
-            dgvResumen.DataSource = gastos.ConsultarGastos(dtpDesde.Value, dtpHasta.Value);
+            dgvResumen.DataSource = gastos.ConsultarGastos(dtpDesde.Value.Date, dtpHasta.Value.Date);
             dgvResumen.Refresh();
-
+            Total();
         }
 
         private void btnGastosHoy_Click(object sender, EventArgs e)
         {
             Gasto gastos = new Gasto();
-            dgvResumen.DataSource = gastos.ConsultarGastos(DateTime.Today, DateTime.Today);
+            dgvResumen.DataSource = gastos.ConsultarGastos(DateTime.Today.Date, DateTime.Today.Date);
             dgvResumen.Refresh();
+            Total();
+        }
+
+        private void Total()
+        {
+            total = 0;
+            for (int i = 0; i < dgvResumen.RowCount - 1; i++)
+            {
+                total += double.Parse(dgvResumen.Rows[i].Cells[3].Value.ToString());
+            }
+            lblTotal.Text = "$" + total.ToString();
         }
     }
 }

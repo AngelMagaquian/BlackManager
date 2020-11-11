@@ -47,9 +47,9 @@
             this.actualizarPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lblVuelto = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,9 +70,13 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCargarFiambre = new System.Windows.Forms.Button();
+            this.numFiambre = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVuelto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFiambre)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -228,19 +232,12 @@
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarCompraToolStripMenuItem,
             this.consultarComprasToolStripMenuItem,
-            this.nuevoProveedorToolStripMenuItem});
+            this.nuevoProveedorToolStripMenuItem,
+            this.nuevaMarcaToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.comprasToolStripMenuItem.Text = "Compras";
-            // 
-            // registrarCompraToolStripMenuItem
-            // 
-            this.registrarCompraToolStripMenuItem.Name = "registrarCompraToolStripMenuItem";
-            this.registrarCompraToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.registrarCompraToolStripMenuItem.Text = "Registrar compra";
-            this.registrarCompraToolStripMenuItem.Click += new System.EventHandler(this.registrarCompraToolStripMenuItem_Click);
             // 
             // consultarComprasToolStripMenuItem
             // 
@@ -255,6 +252,13 @@
             this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.nuevoProveedorToolStripMenuItem.Text = "Nuevo proveedor";
             this.nuevoProveedorToolStripMenuItem.Click += new System.EventHandler(this.nuevoProveedorToolStripMenuItem_Click);
+            // 
+            // nuevaMarcaToolStripMenuItem
+            // 
+            this.nuevaMarcaToolStripMenuItem.Name = "nuevaMarcaToolStripMenuItem";
+            this.nuevaMarcaToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.nuevaMarcaToolStripMenuItem.Text = "Nueva marca";
+            this.nuevaMarcaToolStripMenuItem.Click += new System.EventHandler(this.nuevaMarcaToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -338,7 +342,7 @@
             // 
             this.txtCodigo_Producto.BackColor = System.Drawing.SystemColors.Window;
             this.txtCodigo_Producto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo_Producto.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtCodigo_Producto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCodigo_Producto.Location = new System.Drawing.Point(224, 58);
             this.txtCodigo_Producto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigo_Producto.Name = "txtCodigo_Producto";
@@ -469,11 +473,45 @@
             this.subtot.ReadOnly = true;
             this.subtot.Width = 125;
             // 
+            // btnCargarFiambre
+            // 
+            this.btnCargarFiambre.Location = new System.Drawing.Point(608, 92);
+            this.btnCargarFiambre.Name = "btnCargarFiambre";
+            this.btnCargarFiambre.Size = new System.Drawing.Size(121, 38);
+            this.btnCargarFiambre.TabIndex = 36;
+            this.btnCargarFiambre.Text = "Fiambreria";
+            this.btnCargarFiambre.UseVisualStyleBackColor = true;
+            this.btnCargarFiambre.Click += new System.EventHandler(this.btnCargarFiambre_Click);
+            // 
+            // numFiambre
+            // 
+            this.numFiambre.Location = new System.Drawing.Point(739, 101);
+            this.numFiambre.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+            this.numFiambre.Name = "numFiambre";
+            this.numFiambre.Size = new System.Drawing.Size(152, 22);
+            this.numFiambre.TabIndex = 37;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(749, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 17);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Total de fiambreria";
+            // 
             // FrmRegistrar_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 638);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.numFiambre);
+            this.Controls.Add(this.btnCargarFiambre);
             this.Controls.Add(this.lblVuelto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -500,6 +538,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVuelto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFiambre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,7 +563,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarStockActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarPrecioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label lblVuelto;
@@ -548,5 +586,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtot;
         private System.Windows.Forms.ToolStripMenuItem nuevoProveedorToolStripMenuItem;
+        private System.Windows.Forms.Button btnCargarFiambre;
+        private System.Windows.Forms.NumericUpDown numFiambre;
+        private System.Windows.Forms.ToolStripMenuItem nuevaMarcaToolStripMenuItem;
+        private System.Windows.Forms.Label label4;
     }
 }

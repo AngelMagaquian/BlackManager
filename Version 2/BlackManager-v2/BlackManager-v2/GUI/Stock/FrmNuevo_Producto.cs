@@ -101,14 +101,6 @@ namespace BlackManager_v2.GUI.Stock
             this.Show();
         }
 
-        private void registrarCompraToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmRegistrar_Compra ventana = new FrmRegistrar_Compra();
-            this.Hide();
-            ventana.ShowDialog();
-            this.Show();
-        }
-
         private void registrarGastoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegistrar_Gasato ventana = new FrmRegistrar_Gasato();
@@ -132,7 +124,10 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnNueva_Marca_Click(object sender, EventArgs e)
         {
-
+            FrmNueva_Marca ventana = new FrmNueva_Marca();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -123,6 +123,15 @@ namespace BlackManager_v2.GUI.Ventas
             lblVuelto.Text = "0.00";
         }
 
+        private void btnCargarFiambre_Click(object sender, EventArgs e)
+        {
+            Producto fiambre = new Producto();
+            fiambre.precio = int.Parse(numFiambre.Value.ToString());
+            fiambre.Id = 1;
+            fiambre.id_marca = 0;
+            fiambre.nombre = "Fiambre";
+            AgregarProductoAGrilla(fiambre);
+        }
 
         //------------------------------Tool Strip Menu--------------------------------//
         private void consultarVentasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -189,14 +198,6 @@ namespace BlackManager_v2.GUI.Ventas
             this.Show();
         }
 
-        private void registrarCompraToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmRegistrar_Compra ventana = new FrmRegistrar_Compra();
-            this.Hide();
-            ventana.ShowDialog();
-            this.Show();
-        }
-
         private void consultarComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultar_Compra ventana = new FrmConsultar_Compra();
@@ -224,6 +225,14 @@ namespace BlackManager_v2.GUI.Ventas
             vuelto = decimal.ToDouble(numVuelto.Value);
             vuelto = vuelto-total;
             lblVuelto.Text = vuelto.ToString();
+        }
+
+        private void nuevaMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNueva_Marca ventana = new FrmNueva_Marca();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
         }
     }
 }

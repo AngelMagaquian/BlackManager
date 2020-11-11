@@ -13,6 +13,7 @@ namespace BlackManager_v2.GUI.Ventas
 {
     public partial class FrmConsultar_Ventas : Form
     {
+        public static double total = 0.00;
         public FrmConsultar_Ventas()
         {
             InitializeComponent();
@@ -32,16 +33,27 @@ namespace BlackManager_v2.GUI.Ventas
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Venta ventas = new Venta();
-            dgvResumen.DataSource = ventas.ConsultarVentas(dtpDesde.Value, dtpHasta.Value);
+            dgvResumen.DataSource = ventas.ConsultarVentas(dtpDesde.Value.Date, dtpHasta.Value.Date);
             dgvResumen.Refresh();
-            
+            Total();
         }
 
         private void btnVentasHoy_Click(object sender, EventArgs e)
         {
             Venta ventas = new Venta();
-            dgvResumen.DataSource = ventas.ConsultarVentas(DateTime.Today, DateTime.Now);
+            dgvResumen.DataSource = ventas.ConsultarVentas(DateTime.Today.Date, DateTime.Today.Date);
             dgvResumen.Refresh();
+            Total();
+        }
+
+        private void Total()
+        {
+            total = 0;
+            for (int i = 0; i < dgvResumen.RowCount - 1; i++)
+            {
+                total += double.Parse(dgvResumen.Rows[i].Cells[3].Value.ToString());
+            }
+            lblTotal.Text = "$" + total.ToString();
         }
     }
 }
