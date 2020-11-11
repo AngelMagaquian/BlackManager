@@ -38,7 +38,7 @@ namespace BlackManager_v2.GUI.Gastos
         private void btnGastosHoy_Click(object sender, EventArgs e)
         {
             Gasto gastos = new Gasto();
-            dgvResumen.DataSource = gastos.ConsultarGastos(DateTime.Today, DateTime.Now);
+            dgvResumen.DataSource = gastos.ConsultarGastos(DateTime.Today, DateTime.Today);
             dgvResumen.Refresh();
         }
     }

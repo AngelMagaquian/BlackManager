@@ -119,6 +119,8 @@ namespace BlackManager_v2.GUI.Ventas
             //poner el valor por defecto de num
             numVuelto.Value = 0;
             prod = null;
+            total = 0.00;
+            lblVuelto.Text = "0.00";
         }
 
 
@@ -218,7 +220,8 @@ namespace BlackManager_v2.GUI.Ventas
 
         private void numVuelto_ValueChanged(object sender, EventArgs e)
         {
-            double vuelto = decimal.ToDouble(numVuelto.Value);
+            double vuelto = 0;
+            vuelto = decimal.ToDouble(numVuelto.Value);
             vuelto = vuelto-total;
             lblVuelto.Text = vuelto.ToString();
         }

@@ -37,7 +37,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void Defecto()
         {
-            dgvPrecios.Rows.Clear();
+            //dgvPrecios.Rows.Clear();
             
             Marca m = new Marca();
             Reutilizable.LlenarCombo(cboMarcas, m.ObtenerTodos(), "nombre", "id");
