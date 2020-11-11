@@ -234,5 +234,13 @@ namespace BlackManager_v2.GUI.Ventas
             ventana.ShowDialog();
             this.Show();
         }
+
+        private void nuevoMetodoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNuevo_metodo_pago ventana = new FrmNuevo_metodo_pago();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="GUI\Stock\FrmNueva_Marca.Designer.cs">
       <DependentUpon>FrmNueva_Marca.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Ventas\FrmNuevo_metodo_pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Ventas\FrmNuevo_metodo_pago.Designer.cs">
+      <DependentUpon>FrmNuevo_metodo_pago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmConsultar_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Stock\FrmNueva_Marca.resx">
       <DependentUpon>FrmNueva_Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ventas\FrmNuevo_metodo_pago.resx">
+      <DependentUpon>FrmNuevo_metodo_pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmConsultar_Compra.resx">
       <DependentUpon>FrmConsultar_Compra.cs</DependentUpon>

@@ -73,6 +73,7 @@
             this.btnCargarFiambre = new System.Windows.Forms.Button();
             this.numFiambre = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.nuevoMetodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVuelto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
@@ -114,7 +115,8 @@
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarVentaToolStripMenuItem,
-            this.consultarVentasToolStripMenuItem});
+            this.consultarVentasToolStripMenuItem,
+            this.nuevoMetodoDePagoToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -122,14 +124,14 @@
             // registrarVentaToolStripMenuItem
             // 
             this.registrarVentaToolStripMenuItem.Name = "registrarVentaToolStripMenuItem";
-            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
             this.registrarVentaToolStripMenuItem.Text = "Registrar venta";
             this.registrarVentaToolStripMenuItem.Click += new System.EventHandler(this.registrarVentaToolStripMenuItem_Click);
             // 
             // consultarVentasToolStripMenuItem
             // 
             this.consultarVentasToolStripMenuItem.Name = "consultarVentasToolStripMenuItem";
-            this.consultarVentasToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.consultarVentasToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
             this.consultarVentasToolStripMenuItem.Text = "Consultar ventas";
             this.consultarVentasToolStripMenuItem.Click += new System.EventHandler(this.consultarVentasToolStripMenuItem_Click);
             // 
@@ -504,6 +506,13 @@
             this.label4.TabIndex = 38;
             this.label4.Text = "Total de fiambreria";
             // 
+            // nuevoMetodoDePagoToolStripMenuItem
+            // 
+            this.nuevoMetodoDePagoToolStripMenuItem.Name = "nuevoMetodoDePagoToolStripMenuItem";
+            this.nuevoMetodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.nuevoMetodoDePagoToolStripMenuItem.Text = "Nuevo metodo de pago";
+            this.nuevoMetodoDePagoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMetodoDePagoToolStripMenuItem_Click);
+            // 
             // FrmRegistrar_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -590,5 +599,6 @@
         private System.Windows.Forms.NumericUpDown numFiambre;
         private System.Windows.Forms.ToolStripMenuItem nuevaMarcaToolStripMenuItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem nuevoMetodoDePagoToolStripMenuItem;
     }
 }
