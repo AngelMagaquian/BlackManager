@@ -53,5 +53,14 @@ namespace BlackManager_v2.DAO
             else
                 return false;
         }
+
+        internal DataTable ConsultarGastos(DateTime desde, DateTime hasta)
+        {
+            string sql = "SELECT * FROM Gasto g WHERE g.fecha BETWEEN @desde AND @hasta";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("desde", desde);
+            parametros.Add("hasta", hasta);
+            return BDHelper.Instance.ConsultarSQL(sql, parametros);
+        }
     }
 }

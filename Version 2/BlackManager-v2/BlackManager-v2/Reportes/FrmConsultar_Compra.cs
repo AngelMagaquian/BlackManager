@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackManager_v2.Logica_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,20 @@ namespace BlackManager_v2.Reportes
         {
             dgvResumen.Rows.Clear();
             lblTotal.Text = "$" + "0.00";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Compra comp = new Compra();
+            dgvResumen.DataSource = comp.ConsultarCompras(dtpDesde.Value, dtpHasta.Value);
+            dgvResumen.Refresh();
+        }
+
+        private void btnComprasHoy_Click(object sender, EventArgs e)
+        {
+            Compra comp = new Compra();
+            dgvResumen.DataSource = comp.ConsultarCompras(DateTime.Today, DateTime.Now);
+            dgvResumen.Refresh();
         }
     }
 }

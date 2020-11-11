@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BlackManager_v2.Logica_Negocio;
 
 namespace BlackManager_v2.GUI.Gastos
 {
@@ -26,6 +25,21 @@ namespace BlackManager_v2.GUI.Gastos
         {
             dgvResumen.Rows.Clear();
             lblTotal.Text = "$" + "0.00";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Gasto gastos = new Gasto();
+            dgvResumen.DataSource = gastos.ConsultarGastos(dtpDesde.Value, dtpHasta.Value);
+            dgvResumen.Refresh();
+
+        }
+
+        private void btnGastosHoy_Click(object sender, EventArgs e)
+        {
+            Gasto gastos = new Gasto();
+            dgvResumen.DataSource = gastos.ConsultarGastos(DateTime.Today, DateTime.Now);
+            dgvResumen.Refresh();
         }
     }
 }

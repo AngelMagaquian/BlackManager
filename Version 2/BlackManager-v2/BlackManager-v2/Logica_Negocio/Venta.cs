@@ -1,6 +1,7 @@
 ﻿using BlackManager_v2.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,12 @@ namespace BlackManager_v2.Logica_Negocio
             nueva.monto = monto;
             DAO_Venta oVenta = new DAO_Venta();
             oVenta.InsertVenta(nueva, detalles);
+        }
+
+        public DataTable ConsultarVentas(DateTime desde, DateTime hasta)
+        {
+            DAO_Venta oVentas = new DAO_Venta();
+            return oVentas.ConsultarVentas(desde, hasta);
         }
     }
 }

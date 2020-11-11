@@ -39,5 +39,11 @@ namespace BlackManager_v2.Logica_Negocio
 
             return nuevo;
         }
+
+        public DataTable ConsultarGastos(DateTime desde, DateTime hasta)
+        {
+            oGasto = new DAO_Gasto();
+            return oGasto.ConsultarGastos(desde, hasta);
+        }
     }
 }

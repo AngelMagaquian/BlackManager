@@ -39,6 +39,17 @@ namespace BlackManager_v2.DAO
             BDHelper.Instance.Desconectar();
         }
 
+        internal DataTable ConsultarVentas(DateTime desde, DateTime hasta)
+        {
+            string sql = "SELECT v.id_venta, v.metodo_pago, v.fecha, v.monto_final, m.nombre " +
+                         "FROM Venta v INNER JOIN Metodo_Pago m ON (v.id_metodo_pago=m.id_metodo_de_pago) " +
+                         "WHERE v.fecha BETWEEN @desde AND @hasta";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("desde", desde);
+            parametros.Add("hasta", hasta);
+            return BDHelper.Instance.ConsultarSQL(sql, parametros);
+        }
+
         public IList<Venta> GetAll()
         {
             List<Venta> listaVentas = new List<Venta>();

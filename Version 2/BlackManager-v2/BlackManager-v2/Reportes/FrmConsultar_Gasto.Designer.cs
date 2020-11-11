@@ -67,6 +67,7 @@
             this.btnGastosHoy.TabIndex = 47;
             this.btnGastosHoy.Text = "Ver Gastos de Hoy";
             this.btnGastosHoy.UseVisualStyleBackColor = true;
+            this.btnGastosHoy.Click += new System.EventHandler(this.btnGastosHoy_Click);
             // 
             // btnBuscar
             // 
@@ -77,6 +78,7 @@
             this.btnBuscar.TabIndex = 46;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 

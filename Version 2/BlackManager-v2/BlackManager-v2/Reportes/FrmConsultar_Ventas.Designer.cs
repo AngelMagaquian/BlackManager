@@ -118,6 +118,7 @@
             this.btnVentasHoy.TabIndex = 55;
             this.btnVentasHoy.Text = "Ver Ventas de Hoy";
             this.btnVentasHoy.UseVisualStyleBackColor = true;
+            this.btnVentasHoy.Click += new System.EventHandler(this.btnVentasHoy_Click);
             // 
             // btnBuscar
             // 
@@ -128,6 +129,7 @@
             this.btnBuscar.TabIndex = 54;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmConsultar_Ventas
             // 

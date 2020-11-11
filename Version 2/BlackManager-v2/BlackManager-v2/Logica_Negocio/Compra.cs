@@ -1,6 +1,7 @@
 ﻿using BlackManager_v2.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,12 @@ namespace BlackManager_v2.Logica_Negocio
             nuevo.fecha = DateTime.Now.Date;
 
             return nuevo;
+        }
+
+        public DataTable ConsultarCompras(DateTime desde, DateTime hasta)
+        {
+            oCompra = new DAO_Compra();
+            return oCompra.ConsultaCompras(desde, hasta);
         }
 
     }
