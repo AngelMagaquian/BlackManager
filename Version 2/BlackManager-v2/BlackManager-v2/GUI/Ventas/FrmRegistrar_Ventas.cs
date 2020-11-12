@@ -1,4 +1,4 @@
-﻿using BlackManager.Logica_Negocio;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +56,7 @@ namespace BlackManager_v2.GUI.Ventas
             {
                 dgvResumen.Rows.Add(p.Id, p.nombre, p.nom_marca, 1, p.precio, p.precio);
                 total += p.precio;
+                total = Math.Round(total, 2);
                 lblTotal.Text = total.ToString();
                 txtCodigo_Producto.Text = "";
                 txtCodigo_Producto.Focus();
@@ -68,6 +69,7 @@ namespace BlackManager_v2.GUI.Ventas
                 double subtotal = (double)actual * p.precio;
                 dgvResumen.Rows[row].Cells["subtot"].Value = subtotal;
                 total += subtotal;
+                total = Math.Round(total, 2);
                 lblTotal.Text= total.ToString();
                 txtCodigo_Producto.Text="";
                 txtCodigo_Producto.Focus();
@@ -111,7 +113,7 @@ namespace BlackManager_v2.GUI.Ventas
             txtCodigo_Producto.Focus();
             //llenar cbo y dejarlo seleccionando 0
             Metodo_Pago miMP = new Metodo_Pago();
-            Reutilizable.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "id");
+            Reutilizable.LlenarCombo(cboMetodoPago, miMP.ObtenerTodos(), "nombre", "Id");
             cboMetodoPago.SelectedIndex = 0;
             //limpiar lbls de total y vuelto
             lblTotal.Text = "0.00";
@@ -241,6 +243,30 @@ namespace BlackManager_v2.GUI.Ventas
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+        }
+
+        private void cboMetodoPago_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Metodo_Pago seleccionado = new Metodo_Pago();
+            try
+            {
+                if (cboMetodoPago.SelectedIndex != -1)
+                {
+                    double total_recargo = 0;
+                    int mp = int.Parse(cboMetodoPago.SelectedValue.ToString());
+                    seleccionado = seleccionado.ObtenerPorID(mp);
+                    total_recargo = total + ((total * seleccionado.recargo) / 100);
+                    total_recargo = Math.Round(total_recargo, 2);
+                    lblTotal.Text = total_recargo.ToString();
+
+                }
+            }
+            catch(Exception ex)
+            {
+                //no me importa, lo dejo seguir
+            }
+            
+            
         }
     }
 }

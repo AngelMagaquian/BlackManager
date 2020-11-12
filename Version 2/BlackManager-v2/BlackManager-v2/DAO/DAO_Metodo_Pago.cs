@@ -30,7 +30,7 @@ namespace BlackManager_v2.DAO
             miMP.Id = int.Parse(metodo_pago["id_metodo_de_pago"].ToString());
             miMP.nombre = metodo_pago["nombre"].ToString();
             miMP.descripcion = metodo_pago["descripcion"].ToString();
-            miMP.recargo = float.Parse(metodo_pago["recargo"].ToString());
+            miMP.recargo = double.Parse(metodo_pago["recargo"].ToString());
 
             return miMP;
         }

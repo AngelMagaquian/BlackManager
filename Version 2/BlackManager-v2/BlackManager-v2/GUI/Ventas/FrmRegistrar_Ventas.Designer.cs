@@ -35,6 +35,7 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoMetodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optTarjeta = new System.Windows.Forms.RadioButton();
             this.optEfectivo = new System.Windows.Forms.RadioButton();
             this.lblMetodo1 = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@
             this.btnCargarFiambre = new System.Windows.Forms.Button();
             this.numFiambre = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.nuevoMetodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVuelto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
@@ -134,6 +134,13 @@
             this.consultarVentasToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
             this.consultarVentasToolStripMenuItem.Text = "Consultar ventas";
             this.consultarVentasToolStripMenuItem.Click += new System.EventHandler(this.consultarVentasToolStripMenuItem_Click);
+            // 
+            // nuevoMetodoDePagoToolStripMenuItem
+            // 
+            this.nuevoMetodoDePagoToolStripMenuItem.Name = "nuevoMetodoDePagoToolStripMenuItem";
+            this.nuevoMetodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.nuevoMetodoDePagoToolStripMenuItem.Text = "Nuevo metodo de pago";
+            this.nuevoMetodoDePagoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMetodoDePagoToolStripMenuItem_Click);
             // 
             // optTarjeta
             // 
@@ -274,7 +281,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(943, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(943, 30);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -329,6 +336,7 @@
             this.cboMetodoPago.Name = "cboMetodoPago";
             this.cboMetodoPago.Size = new System.Drawing.Size(121, 24);
             this.cboMetodoPago.TabIndex = 3;
+            this.cboMetodoPago.SelectedValueChanged += new System.EventHandler(this.cboMetodoPago_SelectedValueChanged);
             // 
             // label1
             // 
@@ -505,13 +513,6 @@
             this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 38;
             this.label4.Text = "Total de fiambreria";
-            // 
-            // nuevoMetodoDePagoToolStripMenuItem
-            // 
-            this.nuevoMetodoDePagoToolStripMenuItem.Name = "nuevoMetodoDePagoToolStripMenuItem";
-            this.nuevoMetodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
-            this.nuevoMetodoDePagoToolStripMenuItem.Text = "Nuevo metodo de pago";
-            this.nuevoMetodoDePagoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMetodoDePagoToolStripMenuItem_Click);
             // 
             // FrmRegistrar_Ventas
             // 

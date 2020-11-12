@@ -1,4 +1,4 @@
-﻿using BlackManager.Logica_Negocio;
+﻿
 using BlackManager_v2.Logica_Negocio;
 using System;
 using System.Collections.Generic;
