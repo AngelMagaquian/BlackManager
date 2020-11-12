@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BlackManager_v2.DAO;
-using BlackManager.Logica_Negocio;
+using BlackManager_v2.Logica_Negocio;
 
 namespace BlackManager_v2.Logica_Negocio
 

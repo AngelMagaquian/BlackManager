@@ -18,10 +18,6 @@ namespace BlackManager_v2.GUI.Gastos
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void FrmRegistrar_Gasato_Load(object sender, EventArgs e)
         {

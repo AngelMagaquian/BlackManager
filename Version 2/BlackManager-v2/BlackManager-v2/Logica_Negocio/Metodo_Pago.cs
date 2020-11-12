@@ -1,5 +1,4 @@
-﻿using BlackManager.DAO;
-using BlackManager_v2.DAO;
+﻿using BlackManager_v2.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BlackManager.Logica_Negocio
+namespace BlackManager_v2.Logica_Negocio
 {
     class Metodo_Pago
     {
@@ -42,6 +41,11 @@ namespace BlackManager.Logica_Negocio
         public Metodo_Pago ObtenerPorID(int id)
         {
             return oMetodo_Pago.GetByID(id);
+        }
+
+        public bool NuevoMetodoPago(Metodo_Pago nuevoMetodoPago)
+        {
+            return oMetodo_Pago.NewMetodoPago(nuevoMetodoPago);
         }
     }
 }

@@ -99,7 +99,6 @@
             this.label1.Size = new System.Drawing.Size(243, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "Registrar Gastos";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCargar
             // 

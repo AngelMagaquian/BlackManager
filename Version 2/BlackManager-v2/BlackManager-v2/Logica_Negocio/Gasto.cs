@@ -36,6 +36,7 @@ namespace BlackManager_v2.Logica_Negocio
             nuevo.producto = prod;
             nuevo.descripcion = descrp;
             nuevo.monto = monto;
+            nuevo.fecha = DateTime.Today.Date;
 
             return nuevo;
         }

@@ -1,4 +1,4 @@
-﻿using BlackManager.Logica_Negocio;
+﻿using BlackManager_v2.Logica_Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,6 +45,23 @@ namespace BlackManager_v2.DAO
             var tablaMP = BDHelper.Instance.ConsultarSQL(sql, parametros);
             nuevo = Mappeo(tablaMP.Rows[0]);
             return nuevo;
+        }
+
+        internal bool NewMetodoPago(Metodo_Pago nuevo)
+        {
+            string sql = "INSERT INTO Metodo_Pago (nombre, descripcion, recargo) VALUES " +
+                         " (@nombre, @descripcion, @recargo)";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("nombre", nuevo.nombre);
+            parametros.Add("descripcion", nuevo.descripcion);
+            parametros.Add("recargo", nuevo.recargo);
+            BDHelper.Instance.ConectarTransaccion();
+            int rto = BDHelper.Instance.EjecutarSQL(sql, parametros);
+            BDHelper.Instance.Desconectar();
+            if (rto > 0)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BlackManager_v2.Logica_Negocio;
 
 namespace BlackManager_v2.GUI.Ventas
 {
@@ -27,5 +24,20 @@ namespace BlackManager_v2.GUI.Ventas
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Metodo_Pago nuevoMetodo = new Metodo_Pago();
+            nuevoMetodo.descripcion = txtDescripcion.Text;
+            nuevoMetodo.nombre = txtNombre.Text;
+            nuevoMetodo.recargo = double.Parse(numRecargo.Value.ToString());
+
+            if (nuevoMetodo.NuevoMetodoPago(nuevoMetodo))
+                MessageBox.Show("Nuevo Metodo de pago añadido con exito", "Nuevo Metodo de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Error en la insercion del nuevo metodo de pago", "Nuevo Metodo de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
     }
 }
