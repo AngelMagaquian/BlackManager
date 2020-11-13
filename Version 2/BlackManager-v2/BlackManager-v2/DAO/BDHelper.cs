@@ -21,7 +21,7 @@ namespace BlackManager_v2.DAO
         private OleDbTransaction dbTransaction;
         private TipoConexion connType = TipoConexion.comun;
         private EstadoTransaccion connEstado = EstadoTransaccion.exito;
-        private String cadConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
+        public String cadConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
             ".\\..\\BDKiosco.accdb";
 
         private readonly static BDHelper _instance = new BDHelper();
@@ -29,6 +29,14 @@ namespace BlackManager_v2.DAO
         private BDHelper()
         {
             dbConnection = new OleDbConnection();
+            try
+            {
+                dbConnection.ConnectionString = cadConexion;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con Base de Datos " + ex.Message, "Conexion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             dbConnection.ConnectionString = cadConexion;
             dbCommand = new OleDbCommand();
         }

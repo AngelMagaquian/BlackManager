@@ -268,5 +268,13 @@ namespace BlackManager_v2.GUI.Ventas
             
             
         }
+
+        private void configurarBDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfiguracionDeRutaBD ventana = new ConfiguracionDeRutaBD();
+            this.Hide();
+            ventana.ShowDialog();
+            this.Show();
+        }
     }
 }

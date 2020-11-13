@@ -52,6 +52,8 @@
             this.nuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarBDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblVuelto = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -277,13 +279,29 @@
             this.stockToolStripMenuItem,
             this.comprasToolStripMenuItem,
             this.gastosToolStripMenuItem,
-            this.estadisticasToolStripMenuItem});
+            this.estadisticasToolStripMenuItem,
+            this.configuracionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(943, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(943, 28);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // configuracionToolStripMenuItem
+            // 
+            this.configuracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurarBDToolStripMenuItem});
+            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
+            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.configuracionToolStripMenuItem.Text = "Configuracion";
+            // 
+            // configurarBDToolStripMenuItem
+            // 
+            this.configurarBDToolStripMenuItem.Name = "configurarBDToolStripMenuItem";
+            this.configurarBDToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.configurarBDToolStripMenuItem.Text = "Configurar BD";
+            this.configurarBDToolStripMenuItem.Click += new System.EventHandler(this.configurarBDToolStripMenuItem_Click);
             // 
             // lblVuelto
             // 
@@ -601,5 +619,7 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaMarcaToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem nuevoMetodoDePagoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurarBDToolStripMenuItem;
     }
 }

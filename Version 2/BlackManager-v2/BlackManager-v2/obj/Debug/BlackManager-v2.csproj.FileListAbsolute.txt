@@ -87,7 +87,6 @@ D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackMan
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\bin\Debug\BlackManager-v2.pdb
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Form1.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Compras.FrmNuevo_Proveedor.resources
-D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Compras.FrmRegistrar_Compra.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Compras.FrmRegistrar_Producto_Comprado.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Gastos.FrmConsultar_Gasto.resources
 D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Gastos.FrmRegistrar_Gasato.resources
@@ -150,3 +149,7 @@ C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Reportes.FrmConsultar_Compra.resources
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmNueva_Marca.resources
 C:\Users\angel\Desktop\Git Black Manager\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Ventas.FrmNuevo_metodo_pago.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.ConfiguracionDeRutaBD.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Stock.FrmNueva_Marca.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.GUI.Ventas.FrmNuevo_metodo_pago.resources
+D:\Visual Studio Proyects\Kiosco\BlackManager\Version 2\BlackManager-v2\BlackManager-v2\obj\Debug\BlackManager_v2.Reportes.FrmConsultar_Compra.resources
