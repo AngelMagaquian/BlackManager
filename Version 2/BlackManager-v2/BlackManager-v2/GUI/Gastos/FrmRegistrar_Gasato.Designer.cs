@@ -43,6 +43,11 @@
             // 
             this.numMonto.Location = new System.Drawing.Point(112, 219);
             this.numMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numMonto.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.numMonto.Name = "numMonto";
             this.numMonto.Size = new System.Drawing.Size(107, 22);
             this.numMonto.TabIndex = 36;

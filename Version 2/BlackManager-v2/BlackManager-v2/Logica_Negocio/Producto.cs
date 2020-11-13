@@ -1,10 +1,7 @@
-﻿using BlackManager.DAO;
-using BlackManager_v2.DAO;
+﻿using BlackManager_v2.DAO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 
 namespace BlackManager_v2.Logica_Negocio
@@ -72,12 +69,11 @@ namespace BlackManager_v2.Logica_Negocio
 
         public static void Llenar_Grilla_Marca(DataGridView grilla, int marca)
         {
-            Producto objProd = new Producto();
-            IList<Producto> todosProductos = objProd.ObtenerXMarca(marca);
-            grilla.DataSource = todosProductos;
+            DAO_Producto oProductos = new DAO_Producto();
+            grilla.DataSource = oProductos.GetByMarca(marca);
         }
 
-        private IList<Producto> ObtenerXMarca(int marca)
+        private DataTable ObtenerXMarca(int marca)
         {
             return oProducto.GetByMarca(marca);
         }
@@ -85,6 +81,12 @@ namespace BlackManager_v2.Logica_Negocio
         public bool ActualizarPrecio(long id_prod, double nuevoPrecio)
         {
             return oProducto.UpdatePrecio(id_prod, nuevoPrecio);
+        }
+
+        public DataTable ConsultarProductos()
+        {
+            oProducto = new DAO_Producto();
+            return oProducto.ConsultarTodos();
         }
     }
 }

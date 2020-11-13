@@ -112,7 +112,7 @@ namespace BlackManager_v2.GUI.Stock
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            long id_prod = long.Parse(dgvResumen.SelectedRows[0].Cells["Id"].Value.ToString());
+            long id_prod = long.Parse(dgvResumen.SelectedRows[0].Cells["id_producto"].Value.ToString());
             FrmRegistrar_Producto_Comprado ventana = new FrmRegistrar_Producto_Comprado(id_prod);
             this.Hide();
             ventana.ShowDialog();

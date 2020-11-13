@@ -1,10 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +9,6 @@ using BlackManager_v2.GUI.Gastos;
 using BlackManager_v2.Logica_Negocio;
 using BlackManager_v2.GUI.Compras;
 using BlackManager_v2.Reportes;
-using System.Drawing.Imaging;
 
 namespace BlackManager_v2.GUI.Ventas
 {
@@ -32,7 +27,7 @@ namespace BlackManager_v2.GUI.Ventas
         }
         private void txtCodigo_Producto_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtCodigo_Producto.Text))
+            /*if (String.IsNullOrEmpty(txtCodigo_Producto.Text))
                 prod = null;
             else
             {
@@ -46,7 +41,7 @@ namespace BlackManager_v2.GUI.Ventas
                     MessageBox.Show("El codigo del producto no existe en la base de datos",
                         "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+            }*/
         }
         
         private void AgregarProductoAGrilla(Producto p)
@@ -275,6 +270,30 @@ namespace BlackManager_v2.GUI.Ventas
             this.Hide();
             ventana.ShowDialog();
             this.Show();
+        }
+
+        private void txtCodigo_Producto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (String.IsNullOrEmpty(txtCodigo_Producto.Text))
+                    prod = null;
+                else
+                {
+                    try //Busca el producto en la bd y si lo encuentra lo añade a la grilla, sino muestra mensaje de error.
+                    {
+                        prod = Producto.ObtenerPorID(long.Parse(txtCodigo_Producto.Text));
+                        AgregarProductoAGrilla(prod);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("El codigo del producto no existe en la base de datos",
+                            "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            
         }
     }
 }

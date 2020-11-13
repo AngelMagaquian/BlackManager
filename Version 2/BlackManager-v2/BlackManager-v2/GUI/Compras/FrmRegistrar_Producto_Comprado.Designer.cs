@@ -111,6 +111,7 @@
             this.panelMayor.Controls.Add(this.label5);
             this.panelMayor.Controls.Add(this.numCantCaja);
             this.panelMayor.Controls.Add(this.label6);
+            this.panelMayor.Enabled = false;
             this.panelMayor.Location = new System.Drawing.Point(443, 203);
             this.panelMayor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMayor.Name = "panelMayor";
@@ -148,6 +149,7 @@
             this.numPrecioTotal.Name = "numPrecioTotal";
             this.numPrecioTotal.Size = new System.Drawing.Size(88, 22);
             this.numPrecioTotal.TabIndex = 18;
+            this.numPrecioTotal.ValueChanged += new System.EventHandler(this.numPrecioTotal_ValueChanged);
             // 
             // label7
             // 
@@ -210,6 +212,7 @@
             this.panelUnidad.Controls.Add(this.label4);
             this.panelUnidad.Controls.Add(this.numUnidades);
             this.panelUnidad.Controls.Add(this.label3);
+            this.panelUnidad.Enabled = false;
             this.panelUnidad.Location = new System.Drawing.Point(41, 203);
             this.panelUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelUnidad.Name = "panelUnidad";
@@ -219,7 +222,7 @@
             // lblResultado1
             // 
             this.lblResultado1.AutoSize = true;
-            this.lblResultado1.Location = new System.Drawing.Point(24, 260);
+            this.lblResultado1.Location = new System.Drawing.Point(146, 223);
             this.lblResultado1.Name = "lblResultado1";
             this.lblResultado1.Size = new System.Drawing.Size(67, 17);
             this.lblResultado1.TabIndex = 21;
@@ -230,9 +233,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(19, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(185, 17);
+            this.label11.Size = new System.Drawing.Size(117, 17);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Resultado (precio por total):";
+            this.label11.Text = "Resultado (total):";
             // 
             // numPrecioPorUnidad
             // 
@@ -247,6 +250,7 @@
             this.numPrecioPorUnidad.Name = "numPrecioPorUnidad";
             this.numPrecioPorUnidad.Size = new System.Drawing.Size(88, 22);
             this.numPrecioPorUnidad.TabIndex = 10;
+            this.numPrecioPorUnidad.ValueChanged += new System.EventHandler(this.numPrecioPorUnidad_ValueChanged);
             // 
             // label4
             // 

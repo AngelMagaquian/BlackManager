@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadisticasDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.balanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,27 +88,6 @@
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar Venta";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // estadisticasToolStripMenuItem
-            // 
-            this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadisticasDeVentasToolStripMenuItem,
-            this.balanceToolStripMenuItem});
-            this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
-            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
-            this.estadisticasToolStripMenuItem.Text = "Estadisticas";
-            // 
-            // estadisticasDeVentasToolStripMenuItem
-            // 
-            this.estadisticasDeVentasToolStripMenuItem.Name = "estadisticasDeVentasToolStripMenuItem";
-            this.estadisticasDeVentasToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.estadisticasDeVentasToolStripMenuItem.Text = "Estadisticas de ventas";
-            // 
-            // balanceToolStripMenuItem
-            // 
-            this.balanceToolStripMenuItem.Name = "balanceToolStripMenuItem";
-            this.balanceToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.balanceToolStripMenuItem.Text = "Balance";
             // 
             // ventasToolStripMenuItem
             // 
@@ -279,7 +255,6 @@
             this.stockToolStripMenuItem,
             this.comprasToolStripMenuItem,
             this.gastosToolStripMenuItem,
-            this.estadisticasToolStripMenuItem,
             this.configuracionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -377,6 +352,7 @@
             this.txtCodigo_Producto.Size = new System.Drawing.Size(227, 22);
             this.txtCodigo_Producto.TabIndex = 1;
             this.txtCodigo_Producto.TextChanged += new System.EventHandler(this.txtCodigo_Producto_TextChanged);
+            this.txtCodigo_Producto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_Producto_KeyPress);
             // 
             // label3
             // 
@@ -574,9 +550,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ToolStripMenuItem estadisticasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estadisticasDeVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarVentasToolStripMenuItem;

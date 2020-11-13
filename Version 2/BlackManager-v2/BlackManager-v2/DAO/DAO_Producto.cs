@@ -16,7 +16,7 @@ namespace BlackManager_v2.DAO
         public IList<Producto> GetAll()
         {
             List<Producto> listaProductos = new List<Producto>();
-            string sql = "Select p.id_producto, p.nombre,p.id_marca, m.nombre AS 'NomMarca', p.tipo, p.precio, p.cantidad " +
+            string sql = "Select p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.tipo, p.precio, p.cantidad " +
                         "From Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca)";
             var tablaProdu = BDHelper.Instance.ConsultarSQL(sql);
             foreach (DataRow fila in tablaProdu.Rows)
@@ -27,22 +27,23 @@ namespace BlackManager_v2.DAO
             return listaProductos;
         }
 
-        public IList<Producto> GetByMarca(int marca)
+        public DataTable GetByMarca(int marca)
         {
-            List<Producto> listaProductos = new List<Producto>();
-            string sql = "SELECT p.id_producto, p.nombre, p.id_marca, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
+            //List<Producto> listaProductos = new List<Producto>();
+            string sql = "SELECT p.id_producto, p.nombre, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
                         "FROM Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca) " +
-                        "WHERE m.id_marca = @marca";
+                        "WHERE m.id_marca = @marca " +
+                        "ORDER BY m.id_marca";
             var parametros = new Dictionary<string, object>();
             parametros.Add("marca", marca);
             var tablaProdu = BDHelper.Instance.ConsultarSQL(sql, parametros);
 
-            foreach (DataRow fila in tablaProdu.Rows)
+            /*foreach (DataRow fila in tablaProdu.Rows)
             {
                 listaProductos.Add(Mappeo(fila));
-            }
+            }*/
 
-            return listaProductos;
+            return tablaProdu;
         }
 
         private Producto Mappeo(DataRow produ)
@@ -92,6 +93,18 @@ namespace BlackManager_v2.DAO
 
         }
 
+        internal DataTable ConsultarTodos()
+        {
+            string sql = "SELECT p.id_producto, p.nombre, m.nombre AS 'NomMarca', p.precio, p.cantidad, p.tipo " +
+                        "FROM Producto p INNER JOIN Marca m ON (p.id_marca=m.id_marca) " +
+                        "ORDER BY m.id_marca";
+            var parametros = new Dictionary<string, object>();
+            var tablaProdu = BDHelper.Instance.ConsultarSQL(sql);
+
+
+            return tablaProdu;
+        }
+
         internal Producto GetByID(long id)
         {
             try
@@ -108,7 +121,7 @@ namespace BlackManager_v2.DAO
                 return nuevo;
 
             }
-            catch 
+            catch (Exception ex)
             {
                 return null;
             }
@@ -134,27 +147,6 @@ namespace BlackManager_v2.DAO
             }
 
         }
-
-
-
-        /*internal void ActualizarPrecio(long id_producto, double precio)
-        {
-            string sql = string.Concat("Insert INTO Producto",
-                                        "           ([precio])",
-                                        "VALUES",
-                                        "(@precio)",
-                                        "WHERE id_producto = @id_producto");
-            var parametros = new Dictionary<string, object>();
-            parametros.Add("precio", precio);
-            parametros.Add("id_producto", id_producto);
-
-            BDHelper.Instance.ConectarTransaccion();
-            int rtdo = BDHelper.Instance.EjecutarSQL(sql, parametros);
-            BDHelper.Instance.Desconectar();
-
-            if (rtdo > 0)
-                MessageBox.Show("Precio actualizado con exito", "Actualizacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        } */
 
         internal bool UpdatePrecio (long id_producto, double nuevoPrecio)
         {

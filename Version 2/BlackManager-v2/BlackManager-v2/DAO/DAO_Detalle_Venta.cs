@@ -37,7 +37,7 @@ namespace BlackManager.DAO
         public IList<Detalle_Venta> GetAll()
         {
             List<Detalle_Venta> listaDetalles = new List<Detalle_Venta>();
-            string sql = "Select d.id_venta, p.nombre,v.id_producto, v.cantidad_producto, v.subtotal " +
+            string sql = "Select d.id_venta, p.nombre, v.id_producto, v.cantidad_producto, v.subtotal " +
                         "From VentaXProducto v INNER JOIN Producto p ON (v.id_producto=p.id_producto)";
             var tablaDetalles = BDHelper.Instance.ConsultarSQL(sql);
             foreach (DataRow fila in tablaDetalles.Rows)

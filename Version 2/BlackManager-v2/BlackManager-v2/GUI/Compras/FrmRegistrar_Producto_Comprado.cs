@@ -104,5 +104,16 @@ namespace BlackManager_v2.GUI.Compras
             this.Show();
             cboProveedores.Refresh();
         }
+
+        private void numPrecioPorUnidad_ValueChanged(object sender, EventArgs e)
+        {
+            lblResultado1.Text = Convert.ToString(numUnidades.Value * numPrecioPorUnidad.Value);
+        }
+
+        private void numPrecioTotal_ValueChanged(object sender, EventArgs e)
+        {
+            decimal precioCaja = Math.Round((numCantCaja.Value / numPrecioTotal.Value), 2);
+            lblresultado2.Text = Convert.ToString(precioCaja);
+        }
     }
 }

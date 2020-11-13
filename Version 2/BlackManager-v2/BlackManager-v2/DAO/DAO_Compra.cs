@@ -44,7 +44,7 @@ namespace BlackManager_v2.DAO
 
         internal DataTable ConsultaCompras(DateTime desde, DateTime hasta)
         {
-            string sql = "SELECT c.id_compra, c.id_producto, p.nombre AS NomProd, c.id_proveedor, pr.nombre AS NomProv, " +
+            string sql = "SELECT c.id_compra, p.nombre AS NomProd, pr.nombre AS NomProv, " +
                                 "c.fecha, c.precio_unitario, c.cantidad FROM( Compra c INNER JOIN Producto p ON (c.id_producto=p.id_producto) )" +
                                 "INNER JOIN Proveedor pr ON (c.id_proveedor=pr.id_proveedor) " +
                                 "WHERE c.fecha BETWEEN @desde AND @hasta ";
