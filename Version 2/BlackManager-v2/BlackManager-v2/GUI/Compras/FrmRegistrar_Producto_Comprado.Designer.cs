@@ -360,9 +360,9 @@
             // 
             // btnNuevoProv
             // 
-            this.btnNuevoProv.Location = new System.Drawing.Point(437, 126);
+            this.btnNuevoProv.Location = new System.Drawing.Point(427, 116);
             this.btnNuevoProv.Name = "btnNuevoProv";
-            this.btnNuevoProv.Size = new System.Drawing.Size(129, 38);
+            this.btnNuevoProv.Size = new System.Drawing.Size(139, 56);
             this.btnNuevoProv.TabIndex = 23;
             this.btnNuevoProv.Text = "Nuevo Proveedor";
             this.btnNuevoProv.UseVisualStyleBackColor = true;

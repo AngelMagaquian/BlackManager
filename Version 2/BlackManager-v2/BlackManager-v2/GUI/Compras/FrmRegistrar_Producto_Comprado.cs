@@ -112,8 +112,9 @@ namespace BlackManager_v2.GUI.Compras
 
         private void numPrecioTotal_ValueChanged(object sender, EventArgs e)
         {
-            decimal precioCaja = Math.Round((numCantCaja.Value / numPrecioTotal.Value), 2);
+            decimal precioCaja = Math.Round((numPrecioTotal.Value / numCantCaja.Value ), 2);
             lblresultado2.Text = Convert.ToString(precioCaja);
         }
+
     }
 }
